@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | SVC Global</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <section class="section" style="min-height: 70vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-message">
+          <%= lang === 'ar' ? 'الصفحة غير موجودة' : 'Page Not Found' %>
+        </h1>
+        <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+          <%= lang === 'ar' 
+            ? 'للأسف، الصفحة التي تبحث عنها غير متاحة أو قد تم حذفها.' 
+            : 'Sorry, the page you are looking for is not available or may have been removed.'
+          %>
+        </p>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="/<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-primary">
+            <%= lang === 'ar' ? 'العودة إلى الرئيسية' : 'Back to Home' %>
+          </a>
+          <a href="/shop<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-secondary">
+            <%= lang === 'ar' ? 'التسوق الآن' : 'Start Shopping' %>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>

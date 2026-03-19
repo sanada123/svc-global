@@ -1,0 +1,147 @@
+<header id="header">
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+  <div class="header-main">
+    <a href="<%= lang === 'ar' ? '/?lang=ar' : '/?lang=en' %>" class="logo">SVC GLOBAL</a>
+
+    <nav class="nav">
+      <a href="<%= lang === 'ar' ? '/?lang=ar' : '/?lang=en' %>"><%= lang === 'ar' ? 'الرئيسية' : 'Home' %></a>
+      <a href="<%= lang === 'ar' ? '/shop?lang=ar' : '/shop?lang=en' %>"><%= lang === 'ar' ? 'المتجر' : 'Shop' %></a>
+      <a href="<%= lang === 'ar' ? '/about?lang=ar' : '/about?lang=en' %>"><%= lang === 'ar' ? 'من نحن' : 'About' %></a>
+      <a href="<%= lang === 'ar' ? '/contact?lang=ar' : '/contact?lang=en' %>"><%= lang === 'ar' ? 'اتصل بنا' : 'Contact' %></a>
+    </nav>
+
+    <div class="header-icons">
+      <button class="icon-btn" id="cart-btn" aria-label="<%= lang === 'ar' ? 'سلة التسوق' : 'Shopping Cart' %>">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-badge" id="cart-count" style="display: none;" aria-live="polite" aria-atomic="true">0</span>
+      </button>
+
+      <div class="lang-switcher">
+        <button class="lang-btn <%= lang === 'ar' ? 'active' : '' %>" aria-label="<%= lang === 'ar' ? 'اللغة العربية مختارة' : 'Switch to Arabic' %>" onclick="window.location.href='?lang=ar'">
+          العربية
+        </button>
+        <button class="lang-btn <%= lang === 'en' ? 'active' : '' %>" aria-label="<%= lang === 'en' ? 'English selected' : 'Switch to English' %>" onclick="window.location.href='?lang=en'">
+          EN
+        </button>
+      </div>
+
+      <button class="hamburger" id="menu-toggle" aria-label="<%= lang === 'ar' ? 'فتح القائمة' : 'Open menu' %>" aria-expanded="false" aria-controls="mobile-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="mobile-menu-title">
+    <h2 id="mobile-menu-title" class="sr-only"><%= lang === 'ar' ? 'القائمة الرئيسية' : 'Main Menu' %></h2>
+
+    <button class="mobile-menu-close" id="menu-close" aria-label="<%= lang === 'ar' ? 'إغلاق القائمة' : 'Close menu' %>">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+
+    <nav class="mobile-nav">
+      <a href="<%= lang === 'ar' ? '/?lang=ar' : '/?lang=en' %>"><%= lang === 'ar' ? 'الرئيسية' : 'Home' %></a>
+      <a href="<%= lang === 'ar' ? '/shop?lang=ar' : '/shop?lang=en' %>"><%= lang === 'ar' ? 'المتجر' : 'Shop' %></a>
+      <a href="<%= lang === 'ar' ? '/about?lang=ar' : '/about?lang=en' %>"><%= lang === 'ar' ? 'من نحن' : 'About' %></a>
+      <a href="<%= lang === 'ar' ? '/contact?lang=ar' : '/contact?lang=en' %>"><%= lang === 'ar' ? 'اتصل بنا' : 'Contact' %></a>
+      <a href="<%= lang === 'ar' ? '/blog?lang=ar' : '/blog?lang=en' %>"><%= lang === 'ar' ? 'المقالات' : 'Blog' %></a>
+    </nav>
+
+    <div class="social-links" style="margin-top: 3rem;">
+      <a href="https://facebook.com/svcglobal" target="_blank" rel="noopener noreferrer" aria-label="<%= lang === 'ar' ? 'تابعنا على فيسبوك' : 'Follow us on Facebook' %>">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1"/>
+          <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm3 11h-2.5v8h-3v-8H8v-3h1.5V9c0-1.2.6-3 3-3h2.5v2.7h-1.8c-.3 0-.5.1-.5.5v1.3h2.3l-.5 3z"/>
+        </svg>
+      </a>
+      <a href="https://instagram.com/svcglobal" target="_blank" rel="noopener noreferrer" aria-label="<%= lang === 'ar' ? 'تابعنا على إنستاجرام' : 'Follow us on Instagram' %>">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <circle cx="17.5" cy="6.5" r="1.5"/>
+        </svg>
+      </a>
+      <a href="https://twitter.com/svcglobal" target="_blank" rel="noopener noreferrer" aria-label="<%= lang === 'ar' ? 'تابعنا على تويتر' : 'Follow us on Twitter' %>">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5c4 2 8 0 10-4s4-6 4-6a4.41 4.41 0 00-1-2.77z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .skip-to-main {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+  }
+
+  .skip-to-main:focus {
+    top: 0;
+  }
+
+  #mobile-menu {
+    z-index: 200;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  function openMenu() {
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    menuToggle.focus();
+  }
+
+  menuToggle.addEventListener('click', openMenu);
+  menuClose.addEventListener('click', closeMenu);
+
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu || e.target.closest('a')) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.getAttribute('aria-hidden') === 'false') {
+      closeMenu();
+    }
+  });
+</script>

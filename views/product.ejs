@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <!-- Breadcrumbs Navigation -->
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumbs-list">
+        <li><a href="/<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>"><%= lang === 'ar' ? 'الرئيسية' : 'Home' %></a></li>
+        <li><a href="/shop<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>"><%= lang === 'ar' ? 'المتجر' : 'Shop' %></a></li>
+        <li><a href="/shop<%= lang === 'ar' ? '?lang=ar&category=' : '?lang=en&category=' %><%= product.category %>"><%= t(categories.find(c => c.id === product.category)?.name || '') %></a></li>
+        <li aria-current="page"><%= t(product.name) %></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1><%= t(product.name) %></h1>
+  </div>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <!-- Product Details -->
+        <div class="product-detail">
+          <!-- Product Image -->
+          <div class="product-image-large">
+            <img src="<%= product.image %>" alt="<%= t(product.name) %>" id="main-image">
+          </div>
+
+          <!-- Product Info -->
+          <div class="product-details-info">
+            <h2><%= t(product.name) %></h2>
+
+            <!-- Meta Info -->
+            <div class="product-meta">
+              <div class="product-meta-item">
+                <h4><%= lang === 'ar' ? 'الفئة' : 'Category' %></h4>
+                <p><%= t(categories.find(c => c.id === product.category)?.name || '') %></p>
+              </div>
+              <div class="product-meta-item">
+                <h4><%= lang === 'ar' ? 'الحالة' : 'Status' %></h4>
+                <div class="status-indicator <%= product.inStock ? 'in-stock' : 'out-of-stock' %>">
+                  <span class="status-icon">
+                    <% if (product.inStock) { %>
+                      <svg class="icon-checkmark" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                    <% } else { %>
+                      <svg class="icon-x" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                      </svg>
+                    <% } %>
+                  </span>
+                  <span class="status-text">
+                    <%= product.inStock ? (lang === 'ar' ? 'متوفر' : 'In Stock') : (lang === 'ar' ? 'غير متوفر' : 'Out of Stock') %>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price -->
+            <div class="product-price"><%= formatPrice(product.price) %></div>
+
+            <!-- Description -->
+            <div class="product-description">
+              <h3 class="product-description-title">
+                <%= lang === 'ar' ? 'وصف المنتج' : 'Description' %>
+              </h3>
+              <p><%= t(product.description) %></p>
+
+              <% if (product.subcategory) { %>
+                <p class="product-type">
+                  <strong><%= lang === 'ar' ? 'النوع الفرعي:' : 'Type:' %></strong> <%= product.subcategory %>
+                </p>
+              <% } %>
+            </div>
+
+            <!-- Actions -->
+            <div class="product-details-actions">
+              <button class="btn btn-primary add-to-cart" data-id="<%= product.id %>">
+                <%= lang === 'ar' ? 'أضف إلى سلة التسوق' : 'Add to Cart' %>
+              </button>
+              <a
+                href="https://wa.me/971557129912?text=<%= encodeURIComponent('أنا مهتم بـ: ' + t(product.name)) %>"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+                aria-label="<%= lang === 'ar' ? 'استفسر عبر واتساب عن ' : 'Inquire on WhatsApp about ' %><%= t(product.name) %>"
+              >
+                <%= lang === 'ar' ? 'استفسر عبر واتساب' : 'Inquire on WhatsApp' %>
+              </a>
+            </div>
+
+            <!-- Product Info Box -->
+            <div class="product-additional-info">
+              <h4 class="additional-info-title">
+                <%= lang === 'ar' ? 'معلومات إضافية' : 'Additional Information' %>
+              </h4>
+              <ul class="additional-info-list">
+                <li>
+                  <strong><%= lang === 'ar' ? 'رقم المنتج:' : 'Product ID:' %></strong>
+                  <%= product.id %>
+                </li>
+                <li>
+                  <strong><%= lang === 'ar' ? 'العملة:' : 'Currency:' %></strong>
+                  <%= product.currency %>
+                </li>
+                <li>
+                  <strong><%= lang === 'ar' ? 'الضمان:' : 'Warranty:' %></strong>
+                  <%= lang === 'ar' ? 'ضمان شامل' : 'Full Warranty' %>
+                </li>
+                <li>
+                  <strong><%= lang === 'ar' ? 'الشحن:' : 'Shipping:' %></strong>
+                  <%= lang === 'ar' ? 'شحن مجاني عند الشراء فوق 500 درهم' : 'Free shipping on orders over AED 500' %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Products -->
+        <% if (related.length > 0) { %>
+        <div class="related-products">
+          <h2><%= lang === 'ar' ? 'منتجات مشابهة' : 'Related Products' %></h2>
+
+          <div class="products-grid">
+            <% related.forEach(relProduct => { %>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="<%= relProduct.image %>" alt="<%= t(relProduct.name) %>" loading="lazy">
+                </div>
+                <div class="product-info">
+                  <div class="product-category">
+                    <%= t(categories.find(c => c.id === relProduct.category)?.name || '') %>
+                  </div>
+                  <h3 class="product-name"><%= t(relProduct.name) %></h3>
+                  <div class="product-price"><%= formatPrice(relProduct.price) %></div>
+                  <div class="product-actions">
+                    <button class="btn btn-small btn-primary add-to-cart" data-id="<%= relProduct.id %>">
+                      <%= lang === 'ar' ? 'أضف للسلة' : 'Add to Cart' %>
+                    </button>
+                    <a href="/product/<%= relProduct.id %><%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>"
+                       class="btn btn-small btn-secondary">
+                      <%= lang === 'ar' ? 'عرض' : 'View' %>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            <% }); %>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>

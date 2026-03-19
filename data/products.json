@@ -1,0 +1,852 @@
+[
+  {
+    "id": "baraka-single-suspension-cabinet",
+    "name": { "ar": "خزانة بركة المعلقة الفردية", "en": "BARAKA SINGLE SUSPENSION CABINET" },
+    "category": "luxury-furniture",
+    "subcategory": "cabinets",
+    "price": 24123,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/baraka-single-suspension-cabinet.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "خزانة بركة المعلقة الفردية، تحفة فنية تجمع بين الأناقة العصرية والحرفية الاستثنائية. مصنوعة من أجود المواد مع تشطيبات ذهبية فاخرة.",
+      "en": "The Baraka Single Suspension Cabinet is a masterpiece combining modern elegance with exceptional craftsmanship. Made from the finest materials with luxurious gold finishes."
+    }
+  },
+  {
+    "id": "baraka-single-washbasin",
+    "name": { "ar": "حوض بركة الفردي", "en": "BARAKA SINGLE WASHBASIN" },
+    "category": "luxury-furniture",
+    "subcategory": "washbasins",
+    "price": 30276,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/baraka-single-washbasin.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": true,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض بركة الفردي، تصميم فاخر يعكس الذوق الرفيع. سطح رخامي أسود مع تفاصيل ذهبية تضفي لمسة من الفخامة.",
+      "en": "The Baraka Single Washbasin features a luxurious design reflecting refined taste. Black marble surface with gold details adding a touch of opulence."
+    }
+  },
+  {
+    "id": "baraka-suspension-cabinet",
+    "name": { "ar": "خزانة بركة المعلقة", "en": "BARAKA SUSPENSION CABINET" },
+    "category": "luxury-furniture",
+    "subcategory": "cabinets",
+    "price": 38922,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/baraka-suspension-cabinet.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "خزانة بركة المعلقة المزدوجة، قطعة استثنائية تجمع بين التصميم العصري والفخامة. مثالية للحمامات الراقية.",
+      "en": "The Baraka Suspension Cabinet is an exceptional piece combining contemporary design with luxury. Perfect for upscale bathrooms."
+    }
+  },
+  {
+    "id": "baraka-washbasin",
+    "name": { "ar": "حوض بركة", "en": "BARAKA WASHBASIN" },
+    "category": "luxury-furniture",
+    "subcategory": "washbasins",
+    "price": 44664,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/baraka-washbasin.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض بركة المزدوج، تصميم مهيب يجمع بين الرخام الأسود والذهب. يضفي لمسة ملكية على أي حمام.",
+      "en": "The Baraka Double Washbasin features a majestic design combining black marble and gold. Adds a royal touch to any bathroom."
+    }
+  },
+  {
+    "id": "chantaros-wall-mirror",
+    "name": { "ar": "مرآة شانتاروس الجدارية", "en": "CHANTAROS WALL MIRROR" },
+    "category": "luxury-furniture",
+    "subcategory": "mirrors",
+    "price": 14120,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/chantaros-wall-mirror.jpg",
+    "inStock": true,
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "مرآة شانتاروس الجدارية بإطار ذهبي أنيق. تصميم عصري يضيف بُعداً جمالياً لأي مساحة.",
+      "en": "The Chantaros Wall Mirror with an elegant gold frame. A contemporary design that adds aesthetic dimension to any space."
+    }
+  },
+  {
+    "id": "colosseum-freestanding",
+    "name": { "ar": "حوض كولوسيوم القائم", "en": "COLOSSEUM FREESTANDING" },
+    "category": "luxury-furniture",
+    "subcategory": "freestanding",
+    "price": 13363,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/colosseum-freestanding.jpg",
+    "inStock": true,
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض كولوسيوم القائم، مستوحى من العمارة الرومانية الكلاسيكية. تصميم فريد يجمع بين التراث والحداثة.",
+      "en": "The Colosseum Freestanding basin, inspired by classic Roman architecture. A unique design merging heritage with modernity."
+    }
+  },
+  {
+    "id": "diamond-faux-marble-bathtub",
+    "name": { "ar": "حوض استحمام دايموند بالرخام", "en": "DIAMOND FAUX MARBLE BATHTUB" },
+    "category": "luxury-furniture",
+    "subcategory": "bathtubs",
+    "price": 29834,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/diamond-faux-marble-bathtub.jpg",
+    "inStock": true,
+    "featured": true,
+    "bestSeller": true,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض استحمام دايموند بالرخام الصناعي، تحفة فنية تجسد الفخامة المطلقة. تصميم أنيق بلمسات ذهبية.",
+      "en": "The Diamond Faux Marble Bathtub is an artistic masterpiece embodying absolute luxury. Elegant design with golden touches."
+    }
+  },
+  {
+    "id": "diamond-freestand",
+    "name": { "ar": "حوض دايموند القائم", "en": "DIAMOND FREESTAND" },
+    "category": "luxury-furniture",
+    "subcategory": "freestanding",
+    "price": 15356,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/diamond-freestand.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": true,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض دايموند القائم بتصميم هندسي مميز مستوحى من قطع الألماس. يجمع بين الجمال والوظيفة.",
+      "en": "The Diamond Freestand with a distinctive geometric design inspired by diamond cuts. Combines beauty with functionality."
+    }
+  },
+  {
+    "id": "diamond-single-washbasin",
+    "name": { "ar": "حوض دايموند الفردي", "en": "DIAMOND SINGLE WASHBASIN" },
+    "category": "luxury-furniture",
+    "subcategory": "washbasins",
+    "price": 33968,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/diamond-single-washbasin.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض دايموند الفردي بتصميم ألماسي فاخر. سطح مصقول بدقة مع تفاصيل ذهبية راقية.",
+      "en": "The Diamond Single Washbasin with a luxurious diamond-inspired design. Precisely polished surface with refined gold details."
+    }
+  },
+  {
+    "id": "eclipse-wall-mirror",
+    "name": { "ar": "مرآة إكليبس الجدارية", "en": "ECLIPSE WALL MIRROR" },
+    "category": "luxury-furniture",
+    "subcategory": "mirrors",
+    "price": 10058,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/eclipse-wall-mirror-2.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "مرآة إكليبس الجدارية بتصميم مستوحى من الكسوف. إطار معدني أنيق يضفي لمسة فنية على الجدران.",
+      "en": "The Eclipse Wall Mirror with a design inspired by the eclipse. An elegant metallic frame adding an artistic touch to walls."
+    }
+  },
+  {
+    "id": "eden-towel-rack",
+    "name": { "ar": "حامل مناشف إيدن", "en": "EDEN TOWEL RACK" },
+    "category": "luxury-furniture",
+    "subcategory": "accessories",
+    "price": 4686,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/eden-towel-rack.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حامل مناشف إيدن بتصميم عصري أنيق. مصنوع من معدن مطلي بالذهب مع لمسات خشبية فاخرة.",
+      "en": "The Eden Towel Rack with an elegant modern design. Made from gold-plated metal with luxurious wooden accents."
+    }
+  },
+  {
+    "id": "golden-eye-mirror",
+    "name": { "ar": "مرآة العين الذهبية", "en": "GOLDEN EYE MIRROR" },
+    "category": "luxury-furniture",
+    "subcategory": "mirrors",
+    "price": 2998,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/golden-eye-mirror.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "مرآة العين الذهبية بتصميم فريد على شكل عين. إطار ذهبي مميز يجعلها قطعة فنية بامتياز.",
+      "en": "The Golden Eye Mirror with a unique eye-shaped design. A distinctive gold frame making it a true art piece."
+    }
+  },
+  {
+    "id": "koi-freestand",
+    "name": { "ar": "حوض كوي القائم", "en": "KOI FREESTAND" },
+    "category": "luxury-furniture",
+    "subcategory": "freestanding",
+    "price": 17654,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/koi-freestand.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض كوي القائم مستوحى من أسماك الكوي اليابانية. تصميم شرقي فاخر بلمسات ذهبية.",
+      "en": "The Koi Freestand inspired by Japanese Koi fish. A luxurious Eastern design with golden touches."
+    }
+  },
+  {
+    "id": "lapiaz-bathtub",
+    "name": { "ar": "حوض استحمام لابياز", "en": "LAPIAZ BATHTUB" },
+    "category": "luxury-furniture",
+    "subcategory": "bathtubs",
+    "price": 28193,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/lapiaz-bathtub.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض استحمام لابياز بسطح مصقول يحاكي التكوينات الصخرية الطبيعية. رفاهية استثنائية لحمامك.",
+      "en": "The Lapiaz Bathtub with a polished surface mimicking natural rock formations. Exceptional luxury for your bathroom."
+    }
+  },
+  {
+    "id": "lapiaz-freestand",
+    "name": { "ar": "حوض لابياز القائم", "en": "LAPIAZ FREESTAND" },
+    "category": "luxury-furniture",
+    "subcategory": "freestanding",
+    "price": 17055,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/lapiaz-freestand.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض لابياز القائم بتشطيبات فضية لامعة تحاكي الطبيعة. قطعة فنية تجمع بين الوظيفة والجمال.",
+      "en": "The Lapiaz Freestand with shiny silver finishes inspired by nature. An art piece combining function and beauty."
+    }
+  },
+  {
+    "id": "lapiaz-single-washbasin",
+    "name": { "ar": "حوض لابياز الفردي", "en": "LAPIAZ SINGLE WASHBASIN" },
+    "category": "luxury-furniture",
+    "subcategory": "washbasins",
+    "price": 39647,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/lapiaz-single-washbasin.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض لابياز الفردي بتصميم مستوحى من التكوينات الجيولوجية. سطح فضي مصقول مع خزانة فاخرة.",
+      "en": "The Lapiaz Single Washbasin with a design inspired by geological formations. Polished silver surface with a luxury cabinet."
+    }
+  },
+  {
+    "id": "lapiaz-suspension-cabinet",
+    "name": { "ar": "خزانة لابياز المعلقة", "en": "LAPIAZ SUSPENSION CABINET" },
+    "category": "luxury-furniture",
+    "subcategory": "cabinets",
+    "price": 20810,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/lapiaz-suspension-cabinet.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "خزانة لابياز المعلقة بواجهة فضية مميزة. تخزين أنيق يضفي لمسة فاخرة على الحمام.",
+      "en": "The Lapiaz Suspension Cabinet with a distinctive silver facade. Elegant storage adding a luxurious touch to the bathroom."
+    }
+  },
+  {
+    "id": "lapiaz-washbasin",
+    "name": { "ar": "حوض لابياز المزدوج", "en": "LAPIAZ WASHBASIN" },
+    "category": "luxury-furniture",
+    "subcategory": "washbasins",
+    "price": 50597,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/lapiaz-washbasin.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض لابياز المزدوج الفاخر، قطعة استثنائية بتشطيبات فضية تحاكي التضاريس الطبيعية.",
+      "en": "The luxurious Lapiaz Double Washbasin, an exceptional piece with silver finishes mimicking natural terrains."
+    }
+  },
+  {
+    "id": "mondrian-mirror",
+    "name": { "ar": "مرآة موندريان", "en": "MONDRIAN MIRROR" },
+    "category": "luxury-furniture",
+    "subcategory": "mirrors",
+    "price": 4141,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/mondrian-mirror.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "مرآة موندريان مستوحاة من الفن التجريدي. تصميم هندسي فريد بإطار ذهبي أنيق.",
+      "en": "The Mondrian Mirror inspired by abstract art. A unique geometric design with an elegant gold frame."
+    }
+  },
+  {
+    "id": "nazca-single-suspension-cabinet",
+    "name": { "ar": "خزانة نازكا المعلقة الفردية", "en": "NAZCA SINGLE SUSPENSION CABINET" },
+    "category": "luxury-furniture",
+    "subcategory": "cabinets",
+    "price": 24975,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/nazca-single-suspension-cabinet.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "خزانة نازكا المعلقة الفردية بنقوش مستوحاة من خطوط نازكا الشهيرة. تحفة من الحرفية الراقية.",
+      "en": "The Nazca Single Suspension Cabinet with engravings inspired by the famous Nazca Lines. A masterpiece of fine craftsmanship."
+    }
+  },
+  {
+    "id": "nazca-single-washbasin",
+    "name": { "ar": "حوض نازكا الفردي", "en": "NAZCA SINGLE WASHBASIN" },
+    "category": "luxury-furniture",
+    "subcategory": "washbasins",
+    "price": 21725,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/nazca-single-washbasin.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض نازكا الفردي بتصميم فني مستوحى من الحضارة القديمة. خطوط منحوتة بدقة على سطح ذهبي.",
+      "en": "The Nazca Single Washbasin with artistic design inspired by ancient civilization. Precisely carved lines on a golden surface."
+    }
+  },
+  {
+    "id": "nazca-suspension-cabinet",
+    "name": { "ar": "خزانة نازكا المعلقة", "en": "NAZCA SUSPENSION CABINET" },
+    "category": "luxury-furniture",
+    "subcategory": "cabinets",
+    "price": 20778,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/nazca-suspension-cabinet.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "خزانة نازكا المعلقة المزدوجة بنقوش ذهبية فريدة. سعة تخزين واسعة مع تصميم فني.",
+      "en": "The Nazca Double Suspension Cabinet with unique gold engravings. Spacious storage with artistic design."
+    }
+  },
+  {
+    "id": "nazca-washbasin",
+    "name": { "ar": "حوض نازكا المزدوج", "en": "NAZCA WASHBASIN" },
+    "category": "luxury-furniture",
+    "subcategory": "washbasins",
+    "price": 26016,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/nazca-washbasin.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض نازكا المزدوج، تصميم مستوحى من الحضارات القديمة بنقوش ذهبية تحكي قصة الفخامة.",
+      "en": "The Nazca Double Washbasin, a design inspired by ancient civilizations with golden engravings telling a story of luxury."
+    }
+  },
+  {
+    "id": "newton-bathtub",
+    "name": { "ar": "حوض استحمام نيوتن", "en": "NEWTON BATHTUB" },
+    "category": "luxury-furniture",
+    "subcategory": "bathtubs",
+    "price": 27310,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/newton-bathtub.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": true,
+    "description": {
+      "ar": "حوض استحمام نيوتن بتصميم كروي مميز مع قاعدة من الكرات السوداء اللامعة. تجربة استحمام فاخرة.",
+      "en": "The Newton Bathtub with distinctive spherical design and a base of glossy black spheres. A luxurious bathing experience."
+    }
+  },
+  {
+    "id": "newton-freestand",
+    "name": { "ar": "حوض نيوتن القائم", "en": "NEWTON FREESTAND" },
+    "category": "luxury-furniture",
+    "subcategory": "freestanding",
+    "price": 21252,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/newton-freestand.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض نيوتن القائم بقاعدة كروية فريدة. تصميم جريء يجمع بين العلم والفن.",
+      "en": "The Newton Freestand with a unique spherical base. A bold design merging science and art."
+    }
+  },
+  {
+    "id": "newton-washbasin",
+    "name": { "ar": "حوض نيوتن", "en": "NEWTON WASHBASIN" },
+    "category": "luxury-furniture",
+    "subcategory": "washbasins",
+    "price": 31223,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/newton-washbasin.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض نيوتن بتصميم مبتكر مع كرات سوداء لامعة تشكل القاعدة. قطعة فنية للحمامات الراقية.",
+      "en": "The Newton Washbasin with innovative design featuring glossy black spheres forming the base. An art piece for upscale bathrooms."
+    }
+  },
+  {
+    "id": "odonata-floor-mirror",
+    "name": { "ar": "مرآة أودوناتا الأرضية", "en": "ODONATA FLOOR MIRROR" },
+    "category": "luxury-furniture",
+    "subcategory": "mirrors",
+    "price": 15185,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/odonata-floor-mirror.jpg",
+    "inStock": true,
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "مرآة أودوناتا الأرضية بإطار ذهبي مستوحى من أجنحة اليعسوب. تصميم فني يضفي سحراً على المكان.",
+      "en": "The Odonata Floor Mirror with a golden frame inspired by dragonfly wings. An artistic design adding charm to the space."
+    }
+  },
+  {
+    "id": "quimera-dressing-table",
+    "name": { "ar": "طاولة زينة كيميرا", "en": "QUIMERA DRESSING TABLE" },
+    "category": "luxury-furniture",
+    "subcategory": "accessories",
+    "price": 8125,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/quimera-dressing-table.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "طاولة زينة كيميرا بتصميم عصري أنيق. مرآة مدمجة مع سطح رخامي وقاعدة ذهبية.",
+      "en": "The Quimera Dressing Table with an elegant modern design. Integrated mirror with marble top and golden base."
+    }
+  },
+  {
+    "id": "shinto-freestanding",
+    "name": { "ar": "حوض شينتو القائم", "en": "SHINTO FREESTANDING" },
+    "category": "luxury-furniture",
+    "subcategory": "freestanding",
+    "price": 12006,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/shinto-freestanding.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض شينتو القائم بتصميم مستوحى من المعابد اليابانية. خطوط نظيفة وتشطيبات راقية.",
+      "en": "The Shinto Freestanding with design inspired by Japanese temples. Clean lines and refined finishes."
+    }
+  },
+  {
+    "id": "shinto-washbasin",
+    "name": { "ar": "حوض شينتو", "en": "SHINTO WASHBASIN" },
+    "category": "luxury-furniture",
+    "subcategory": "washbasins",
+    "price": 18475,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/shinto-washbasin.jpg",
+    "inStock": true,
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض شينتو بتصميم ياباني أنيق يجمع بين البساطة والفخامة. سطح أسود مع تفاصيل ذهبية.",
+      "en": "The Shinto Washbasin with elegant Japanese design combining simplicity and luxury. Black surface with golden details."
+    }
+  },
+  {
+    "id": "symphony-dressing-table",
+    "name": { "ar": "طاولة زينة سيمفوني", "en": "SYMPHONY DRESSING TABLE" },
+    "category": "luxury-furniture",
+    "subcategory": "accessories",
+    "price": 43592,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-dressing-table.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "طاولة زينة سيمفوني الفاخرة بأعمدة مذهبة وسطح رخامي. تجسيد للأناقة الكلاسيكية.",
+      "en": "The luxurious Symphony Dressing Table with gilded columns and marble top. An embodiment of classical elegance."
+    }
+  },
+  {
+    "id": "symphony-freestand",
+    "name": { "ar": "حوض سيمفوني القائم", "en": "SYMPHONY FREESTAND" },
+    "category": "luxury-furniture",
+    "subcategory": "freestanding",
+    "price": 19611,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-freestand.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض سيمفوني القائم بأعمدة مذهبة وتصميم كلاسيكي فاخر. قطعة استثنائية للحمامات الملكية.",
+      "en": "The Symphony Freestand with gilded columns and luxurious classical design. An exceptional piece for royal bathrooms."
+    }
+  },
+  {
+    "id": "symphony-oval-bathtub",
+    "name": { "ar": "حوض استحمام سيمفوني البيضاوي", "en": "SYMPHONY OVAL BATHTUB" },
+    "category": "luxury-furniture",
+    "subcategory": "bathtubs",
+    "price": 49871,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-oval-bathtub.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": true,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض استحمام سيمفوني البيضاوي، التحفة الأكثر فخامة في مجموعتنا. أعمدة مذهبة وتصميم ملكي.",
+      "en": "The Symphony Oval Bathtub, the most luxurious masterpiece in our collection. Gilded columns and royal design."
+    }
+  },
+  {
+    "id": "symphony-single-ii-suspension-cabinet",
+    "name": { "ar": "خزانة سيمفوني المعلقة II", "en": "SYMPHONY SINGLE II SUSPENSION CABINET" },
+    "category": "luxury-furniture",
+    "subcategory": "cabinets",
+    "price": 29992,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-single-ii-suspension-cabinet.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": true,
+    "description": {
+      "ar": "خزانة سيمفوني المعلقة بتصميم كلاسيكي راقٍ. أعمدة مذهبة مع واجهة مخططة بأناقة.",
+      "en": "The Symphony Single II Suspension Cabinet with refined classical design. Gilded columns with an elegantly striped facade."
+    }
+  },
+  {
+    "id": "symphony-single-washbasin",
+    "name": { "ar": "حوض سيمفوني الفردي", "en": "SYMPHONY SINGLE WASHBASIN" },
+    "category": "luxury-furniture",
+    "subcategory": "washbasins",
+    "price": 42550,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-single-washbasin.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": true,
+    "newArrival": true,
+    "description": {
+      "ar": "حوض سيمفوني الفردي بأعمدة مذهبة وخزانة كلاسيكية. يجسد الفخامة الأوروبية بلمسة شرقية.",
+      "en": "The Symphony Single Washbasin with gilded columns and classical cabinet. Embodies European luxury with an Eastern touch."
+    }
+  },
+  {
+    "id": "symphony-washbasin",
+    "name": { "ar": "حوض سيمفوني المزدوج", "en": "SYMPHONY WASHBASIN" },
+    "category": "luxury-furniture",
+    "subcategory": "washbasins",
+    "price": 56213,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-washbasin.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "حوض سيمفوني المزدوج الفاخر، أكبر قطعة في مجموعة سيمفوني. أعمدة مذهبة مع حوضين أنيقين.",
+      "en": "The luxurious Symphony Double Washbasin, the largest piece in the Symphony collection. Gilded columns with two elegant basins."
+    }
+  },
+  {
+    "id": "vertigo-mirror-set",
+    "name": { "ar": "مجموعة مرايا فيرتيغو", "en": "VERTIGO MIRROR SET" },
+    "category": "luxury-furniture",
+    "subcategory": "mirrors",
+    "price": 15304,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/vertigo-mirror-set.jpg",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "مجموعة مرايا فيرتيغو بتصميم دائري متعدد. ثلاث مرايا بأحجام مختلفة تخلق تأثيراً بصرياً مذهلاً.",
+      "en": "The Vertigo Mirror Set with circular multi-design. Three mirrors in different sizes creating a stunning visual effect."
+    }
+  },
+  {
+    "id": "pen-black-lacquer",
+    "name": { "ar": "قلم حبر جاف جراند إليبس باللّكر الأسود", "en": "Grand Ellipse Black Lacquer Ballpoint Pen" },
+    "category": "writing-instruments",
+    "subcategory": "pens",
+    "price": 2050,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122339.png",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": true,
+    "description": {
+      "ar": "قلم حبر جاف جراند إليبس باللّكر الأسود الفاخر. مصنوع يدوياً بدقة متناهية مع تفاصيل مطلية بالذهب.",
+      "en": "Grand Ellipse Black Lacquer Ballpoint Pen. Handcrafted with meticulous precision featuring gold-plated details."
+    }
+  },
+  {
+    "id": "pen-brown-lacquer",
+    "name": { "ar": "قلم حبر جاف جراند إليبس باللّكر البني", "en": "Grand Ellipse Brown Lacquer Ballpoint Pen" },
+    "category": "writing-instruments",
+    "subcategory": "pens",
+    "price": 2300,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122331-2.png",
+    "inStock": false,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": true,
+    "description": {
+      "ar": "قلم حبر جاف جراند إليبس باللّكر البني الأنيق. تصميم كلاسيكي بلمسات ذهبية تعكس الذوق الرفيع.",
+      "en": "Grand Ellipse Brown Lacquer Ballpoint Pen. A classic design with golden touches reflecting refined taste."
+    }
+  },
+  {
+    "id": "pen-black-diamond",
+    "name": { "ar": "قلم حبر جاف جراند إليبس باللّكر الأسود والماس", "en": "Grand Ellipse Black Lacquer & Diamond Ballpoint Pen" },
+    "category": "writing-instruments",
+    "subcategory": "pens",
+    "price": 14800,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763126301.png",
+    "inStock": false,
+    "featured": false,
+    "bestSeller": true,
+    "newArrival": true,
+    "description": {
+      "ar": "قلم حبر جاف جراند إليبس باللّكر الأسود مرصع بالألماس الطبيعي. تحفة فنية للكتابة الفاخرة.",
+      "en": "Grand Ellipse Black Lacquer & Diamond Ballpoint Pen set with natural diamonds. A writing masterpiece of luxury."
+    }
+  },
+  {
+    "id": "pen-brown-diamond",
+    "name": { "ar": "قلم حبر جاف جراند إليبس باللّكر البني والماس", "en": "Grand Ellipse Brown Lacquer & Diamond Ballpoint Pen" },
+    "category": "writing-instruments",
+    "subcategory": "pens",
+    "price": 4800,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763127152.png",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "قلم حبر جاف جراند إليبس باللّكر البني المرصع بالماس. أناقة لا مثيل لها في عالم الكتابة.",
+      "en": "Grand Ellipse Brown Lacquer & Diamond Ballpoint Pen. Unmatched elegance in the world of writing."
+    }
+  },
+  {
+    "id": "pen-white-diamond",
+    "name": { "ar": "قلم حبر جاف جراند إليبس باللّكر الأبيض والماس", "en": "Grand Ellipse White Lacquer & Diamond Ballpoint Pen" },
+    "category": "writing-instruments",
+    "subcategory": "pens",
+    "price": 4800,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "inStock": false,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "قلم حبر جاف جراند إليبس باللّكر الأبيض مع الماس. تصميم راقٍ بلون أبيض ناصع.",
+      "en": "Grand Ellipse White Lacquer & Diamond Ballpoint Pen. A refined design in pristine white."
+    }
+  },
+  {
+    "id": "pen-palladium-rosegold",
+    "name": { "ar": "قلم حبر جاف جراند إليبس بالبلاديوم والذهب الوردي", "en": "Grand Ellipse Palladium & Rose Gold Ballpoint Pen" },
+    "category": "writing-instruments",
+    "subcategory": "pens",
+    "price": 2150,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "inStock": false,
+    "featured": true,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "قلم حبر جاف جراند إليبس بالبلاديوم والذهب الوردي. مزيج فريد من المعادن الثمينة.",
+      "en": "Grand Ellipse Palladium & Rose Gold Ballpoint Pen. A unique blend of precious metals."
+    }
+  },
+  {
+    "id": "rollerball-rosegold-diamond",
+    "name": { "ar": "قلم رولربول جراند إليبس بالذهب الوردي مع غطاء ألماس", "en": "Grand Ellipse Rose Gold Diamond Cap Rollerball Pen" },
+    "category": "writing-instruments",
+    "subcategory": "pens",
+    "price": 124600,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "inStock": false,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "قلم رولربول جراند إليبس بالذهب الوردي مع غطاء مرصع بالألماس. أغلى قلم في مجموعتنا، تحفة استثنائية.",
+      "en": "Grand Ellipse Rose Gold Rollerball with diamond-encrusted cap. The most prestigious pen in our collection."
+    }
+  },
+  {
+    "id": "rollerball-palladium-diamond",
+    "name": { "ar": "قلم رولربول جراند إليبس بالبلاديوم مع غطاء ألماس", "en": "Grand Ellipse Palladium Diamond Cap Rollerball Pen" },
+    "category": "writing-instruments",
+    "subcategory": "pens",
+    "price": 124700,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "inStock": false,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "قلم رولربول جراند إليبس بالبلاديوم مع غطاء مرصع بالألماس. رمز الفخامة المطلقة.",
+      "en": "Grand Ellipse Palladium Rollerball with diamond-encrusted cap. A symbol of absolute luxury."
+    }
+  },
+  {
+    "id": "rollerball-rosegold",
+    "name": { "ar": "قلم رولربول جراند إليبس بالذهب الوردي", "en": "Grand Ellipse Rose Gold Rollerball Pen" },
+    "category": "writing-instruments",
+    "subcategory": "pens",
+    "price": 14700,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "inStock": false,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "قلم رولربول جراند إليبس بالذهب الوردي. كتابة سلسة وتصميم أنيق بمعدن ثمين.",
+      "en": "Grand Ellipse Rose Gold Rollerball Pen. Smooth writing and elegant design in precious metal."
+    }
+  },
+  {
+    "id": "tasbih-red-agate-diamond",
+    "name": { "ar": "مسبحة جراند إليبس بالعقيق الأحمر والماس", "en": "Grand Ellipse Red Agate & Diamond Prayer Beads" },
+    "category": "prayer-beads",
+    "subcategory": "tasbih",
+    "price": 39000,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122444.png",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "مسبحة جراند إليبس بالعقيق الأحمر الطبيعي مرصعة بالألماس. ٣٣ حبة من العقيق الفاخر مع فواصل ذهبية.",
+      "en": "Grand Ellipse Red Agate & Diamond Prayer Beads. 33 premium agate beads with golden dividers and diamond accents."
+    }
+  },
+  {
+    "id": "tasbih-red-agate",
+    "name": { "ar": "مسبحة جراند إليبس بالعقيق الأحمر", "en": "Grand Ellipse Red Agate Prayer Beads" },
+    "category": "prayer-beads",
+    "subcategory": "tasbih",
+    "price": 36400,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122444.png",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "مسبحة جراند إليبس بالعقيق الأحمر الطبيعي. ٣٣ حبة مصقولة يدوياً مع فواصل من الذهب الخالص.",
+      "en": "Grand Ellipse Red Agate Prayer Beads. 33 hand-polished beads with pure gold dividers."
+    }
+  },
+  {
+    "id": "tasbih-black-onyx",
+    "name": { "ar": "مسبحة جراند إليبس بالأونيكس الأسود", "en": "Grand Ellipse Black Onyx Prayer Beads" },
+    "category": "prayer-beads",
+    "subcategory": "tasbih",
+    "price": 27900,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122444.png",
+    "inStock": true,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "مسبحة جراند إليبس بالأونيكس الأسود الطبيعي. ٣٣ حبة سوداء لامعة مع تفاصيل ذهبية راقية.",
+      "en": "Grand Ellipse Black Onyx Prayer Beads. 33 glossy black beads with refined golden details."
+    }
+  },
+  {
+    "id": "watch-grand-ellipse-royal",
+    "name": { "ar": "ساعة جراند إليبس رويال", "en": "Grand Ellipse Royal Watch" },
+    "category": "watches",
+    "subcategory": "watches",
+    "price": 163700,
+    "currency": "AED",
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "inStock": false,
+    "featured": false,
+    "bestSeller": false,
+    "newArrival": false,
+    "description": {
+      "ar": "ساعة جراند إليبس رويال، تحفة من صناعة الساعات الفاخرة. آلية سويسرية مع هيكل من الذهب والألماس.",
+      "en": "Grand Ellipse Royal Watch, a masterpiece of luxury watchmaking. Swiss mechanism with gold and diamond case."
+    }
+  }
+]

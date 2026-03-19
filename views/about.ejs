@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'ar' ? 'تعرف على SVC Global - شركة متخصصة في بيع المنتجات الفاخرة والحصرية من الأثاث والأقلام والمسابح والساعات الفاخرة' : 'Learn about SVC Global - A luxury company specializing in exclusive furniture, pens, prayer beads, and watches from Dubai, UAE' %>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1><%= lang === 'ar' ? 'من نحن' : 'About Us' %></h1>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-content">
+        <!-- About Section 1 -->
+        <div class="about-section">
+          <h2><%= lang === 'ar' ? 'تاريخنا' : 'Our Story' %></h2>
+          <p>
+            <%= lang === 'ar' 
+              ? 'تأسست SVC Global Fz-LLC برؤية واضحة: تقديم منتجات فاخرة حصرية للعملاء الذين يقدرون الجودة والأناقة. مع سنوات من الخبرة في صناعة الفخامة، أصبحنا الشريك المثالي لأولئك الذين يبحثون عن الأفضل.' 
+              : 'SVC Global Fz-LLC was founded with a clear vision: to provide exclusive luxury products to customers who appreciate quality and elegance. With years of experience in the luxury industry, we have become the ideal partner for those seeking the finest in the world.'
+            %>
+          </p>
+          <p>
+            <%= lang === 'ar' 
+              ? 'تقع شركتنا في قلب دبي، الإمارات العربية المتحدة، وتتمتع بموقع استراتيجي يسمح لنا بالخدمة على مستوى عالمي. نحن ملتزمون بتقديم خدمة عملاء استثنائية وضمان رضا كل عميل.' 
+              : 'Our company is located in the heart of Dubai, United Arab Emirates, with a strategic position that allows us to serve clients globally. We are committed to providing exceptional customer service and ensuring every client\'s satisfaction.'
+            %>
+          </p>
+        </div>
+
+        <!-- About Section 2 -->
+        <div class="about-section">
+          <h2><%= lang === 'ar' ? 'قيمنا' : 'Our Values' %></h2>
+          <p>
+            <%= lang === 'ar' 
+              ? 'في SVC Global، نؤمن بالجودة قبل كل شيء. كل منتج في مجموعتنا يتم اختياره بعناية من أفضل الشركات المصنعة العالمية. نحن نؤمن أن الفخامة الحقيقية تكمن في التفاصيل - الحرفية الاستثنائية، المواد الممتازة، والتصميم الرائع.' 
+              : 'At SVC Global, we believe in quality above all else. Every product in our collection is carefully selected from the world\'s finest manufacturers. We believe that true luxury lies in the details - exceptional craftsmanship, premium materials, and outstanding design.'
+            %>
+          </p>
+          <p>
+            <%= lang === 'ar' 
+              ? 'نقدم مجموعة متنوعة من المنتجات الفاخرة تشمل:' 
+              : 'We offer a diverse range of luxury products including:'
+            %>
+          </p>
+          <ul style="margin: 1rem 0 1rem 2rem; line-height: 2;">
+            <li><strong><%= lang === 'ar' ? 'الأثاث الفاخر:' : 'Luxury Furniture:' %></strong> 
+              <%= lang === 'ar' 
+                ? 'أحواض استحمام وخزائن وأحواض غسيل وملحقات الحمام من أرقى العلامات التجارية العالمية' 
+                : 'Bathtubs, cabinets, washbasins, and bathroom accessories from the finest international brands'
+              %>
+            </li>
+            <li><strong><%= lang === 'ar' ? 'أدوات الكتابة:' : 'Writing Instruments:' %></strong> 
+              <%= lang === 'ar' 
+                ? 'أقلام فاخرة مصنوعة يدويًا من أفضل المواد والأحجار الكريمة' 
+                : 'Handcrafted luxury pens made from the finest materials and precious stones'
+              %>
+            </li>
+            <li><strong><%= lang === 'ar' ? 'المسابح:' : 'Prayer Beads:' %></strong> 
+              <%= lang === 'ar' 
+                ? 'مسابح فاخرة من الأحجار الطبيعية مع تفاصيل من الذهب والألماس' 
+                : 'Luxury prayer beads from natural stones with gold and diamond details'
+              %>
+            </li>
+            <li><strong><%= lang === 'ar' ? 'الساعات:' : 'Watches:' %></strong> 
+              <%= lang === 'ar' 
+                ? 'ساعات فاخرة بآليات سويسرية وتصاميم حصرية' 
+                : 'Luxury watches with Swiss mechanisms and exclusive designs'
+              %>
+            </li>
+          </ul>
+        </div>
+
+        <!-- About Section 3 -->
+        <div class="about-section">
+          <h2><%= lang === 'ar' ? 'التزامنا تجاهك' : 'Our Commitment to You' %></h2>
+          <p>
+            <%= lang === 'ar' 
+              ? 'نحن ملتزمون بتقديم:' 
+              : 'We are committed to providing:'
+            %>
+          </p>
+          <ul style="margin: 1rem 0 1rem 2rem; line-height: 2;">
+            <li><%= lang === 'ar' ? 'منتجات أصلية وحصرية بنسبة 100%' : '100% Authentic and Exclusive Products' %></li>
+            <li><%= lang === 'ar' ? 'خدمة عملاء شخصية وفعالة' : 'Personal and Effective Customer Service' %></li>
+            <li><%= lang === 'ar' ? 'ضمان شامل على جميع المنتجات' : 'Comprehensive Warranty on All Products' %></li>
+            <li><%= lang === 'ar' ? 'سياسة إرجاع مرنة وسهلة' : 'Flexible and Easy Return Policy' %></li>
+            <li><%= lang === 'ar' ? 'شحن آمن وسريع في جميع أنحاء العالم' : 'Safe and Fast Shipping Worldwide' %></li>
+            <li><%= lang === 'ar' ? 'الأسعار العادلة والشفافة' : 'Fair and Transparent Pricing' %></li>
+          </ul>
+        </div>
+
+        <!-- About Section 4 -->
+        <div class="about-section">
+          <h2><%= lang === 'ar' ? 'لماذا تختار SVC Global؟' : 'Why Choose SVC Global?' %></h2>
+          <p>
+            <%= lang === 'ar' 
+              ? 'عندما تتسوق مع SVC Global، أنت لا تشتري منتجات فحسب، بل تستثمر في أسلوب حياة فاخر. كل عملية شراء من عندنا هي تأكيد على ذوقك الرفيع وتقديرك للجودة. نحن فخورون بأن نكون جزءًا من رحلتك نحو فهم واستمتاع الفخامة الحقيقية.' 
+              : 'When you shop with SVC Global, you are not just buying products, but investing in a luxury lifestyle. Every purchase from us is a testament to your refined taste and appreciation for quality. We are proud to be part of your journey towards understanding and enjoying true luxury.'
+            %>
+          </p>
+          <p>
+            <%= lang === 'ar' 
+              ? 'فريقنا متخصص في فهم احتياجاتك وتقديم أفضل الحلول. سواء كنت تبحث عن منتج معين أو تريد استشارة الخبراء، نحن هنا لمساعدتك.' 
+              : 'Our team specializes in understanding your needs and providing the best solutions. Whether you are looking for a specific product or want expert consultation, we are here to help you.'
+            %>
+          </p>
+        </div>
+
+        <!-- CTA -->
+        <div style="background-color: #f5f0eb; padding: 2rem; border-radius: 4px; text-align: center; margin-top: 3rem;">
+          <h3><%= lang === 'ar' ? 'هل أنت مستعد لاكتشاف الفخامة؟' : 'Ready to Discover Luxury?' %></h3>
+          <p style="margin: 1rem 0;">
+            <%= lang === 'ar' 
+              ? 'استكشف مجموعتنا الحصرية اليوم وأضف اللمسة الفاخرة إلى حياتك' 
+              : 'Explore our exclusive collection today and add a touch of luxury to your life'
+            %>
+          </p>
+          <a href="/shop<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-primary">
+            <%= lang === 'ar' ? 'تسوق الآن' : 'Shop Now' %>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>

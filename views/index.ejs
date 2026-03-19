@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'ar' ? 'SVC Global - متخصصة في الأثاث والأقلام والمسابح والساعات الفاخرة' : 'SVC Global - Luxury Furniture, Pens, Prayer Beads, and Watches' %>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1><%= lang === 'ar' ? 'فن الفخامة' : 'The Art of Luxury' %></h1>
+      <p><%= lang === 'ar' ? 'اكتشف مجموعة حصرية من أفضل المنتجات الفاخرة في العالم' : 'Discover an exclusive collection of the world\'s finest luxury products' %></p>
+      <a href="/shop<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-primary"><%= lang === 'ar' ? 'تسوق الآن' : 'Shop Now' %></a>
+      <a href="#main-content" class="btn btn-outline"><%= lang === 'ar' ? 'اكتشف المزيد' : 'Explore More' %></a>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <!-- Categories Section -->
+    <section id="categories" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2><%= lang === 'ar' ? 'فئات المنتجات' : 'Product Categories' %></h2>
+      </div>
+      
+      <div class="categories-grid">
+        <% categories.slice(0, 4).forEach(category => { %>
+          <div class="category-card">
+            <img src="<%= category.image %>" alt="<%= t(category.name) %>" width="400" height="300" loading="eager">
+            <div class="category-card-content">
+              <h3><%= t(category.name) %></h3>
+              <p class="category-description"><%= t(category.description) %></p>
+              <a href="/shop?category=<%= category.id %><%= lang === 'ar' ? '&lang=ar' : '&lang=en' %>">
+                <%= lang === 'ar' ? 'عرض المجموعة →' : 'View Collection →' %>
+              </a>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products / Special Offers -->
+  <% if (featured.length > 0) { %>
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2><%= lang === 'ar' ? 'العروض الخاصة' : 'Special Offers' %></h2>
+      </div>
+      
+      <div class="products-grid">
+        <% featured.slice(0, 6).forEach(product => { %>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="<%= product.image %>" alt="<%= t(product.name) %>" width="300" height="300" loading="lazy">
+              <span class="product-badge"><%= lang === 'ar' ? 'عرض خاص' : 'Special' %></span>
+            </div>
+            <div class="product-info">
+              <div class="product-category"><%= t(categories.find(c => c.id === product.category)?.name || '') %></div>
+              <h3 class="product-name"><%= t(product.name) %></h3>
+              <div class="product-price"><%= formatPrice(product.price) %></div>
+              <div class="product-actions">
+                <button class="btn btn-small btn-primary add-to-cart" data-id="<%= product.id %>">
+                  <%= lang === 'ar' ? 'أضف للسلة' : 'Add to Cart' %>
+                </button>
+                <a href="/product/<%= product.id %><%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-small btn-secondary">
+                  <%= lang === 'ar' ? 'التفاصيل' : 'Details' %>
+                </a>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+  <% } %>
+
+  <!-- Best Sellers -->
+  <% if (bestSellers.length > 0) { %>
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2><%= lang === 'ar' ? 'الأكثر مبيعاً' : 'Best Sellers' %></h2>
+      </div>
+      
+      <div class="products-grid">
+        <% bestSellers.slice(0, 6).forEach(product => { %>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="<%= product.image %>" alt="<%= t(product.name) %>" width="300" height="300" loading="lazy">
+              <span class="product-badge"><%= lang === 'ar' ? 'الأكثر طلباً' : 'Best Seller' %></span>
+            </div>
+            <div class="product-info">
+              <div class="product-category"><%= t(categories.find(c => c.id === product.category)?.name || '') %></div>
+              <h3 class="product-name"><%= t(product.name) %></h3>
+              <div class="product-price"><%= formatPrice(product.price) %></div>
+              <div class="product-actions">
+                <button class="btn btn-small btn-primary add-to-cart" data-id="<%= product.id %>">
+                  <%= lang === 'ar' ? 'أضف للسلة' : 'Add to Cart' %>
+                </button>
+                <a href="/product/<%= product.id %><%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-small btn-secondary">
+                  <%= lang === 'ar' ? 'التفاصيل' : 'Details' %>
+                </a>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+  <% } %>
+
+  <!-- New Arrivals -->
+  <% if (newArrivals.length > 0) { %>
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2><%= lang === 'ar' ? 'الإضافات الجديدة' : 'New Arrivals' %></h2>
+      </div>
+      
+      <div class="products-grid">
+        <% newArrivals.slice(0, 6).forEach(product => { %>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="<%= product.image %>" alt="<%= t(product.name) %>" width="300" height="300" loading="lazy">
+              <span class="product-badge"><%= lang === 'ar' ? 'جديد' : 'New' %></span>
+            </div>
+            <div class="product-info">
+              <div class="product-category"><%= t(categories.find(c => c.id === product.category)?.name || '') %></div>
+              <h3 class="product-name"><%= t(product.name) %></h3>
+              <div class="product-price"><%= formatPrice(product.price) %></div>
+              <div class="product-actions">
+                <button class="btn btn-small btn-primary add-to-cart" data-id="<%= product.id %>">
+                  <%= lang === 'ar' ? 'أضف للسلة' : 'Add to Cart' %>
+                </button>
+                <a href="/product/<%= product.id %><%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-small btn-secondary">
+                  <%= lang === 'ar' ? 'التفاصيل' : 'Details' %>
+                </a>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+  <% } %>
+  </main>
+
+  <%- include('partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>

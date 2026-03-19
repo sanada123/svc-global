@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'ar' ? 'سياسة الخصوصية - تعرف على كيفية حماية SVC Global لبيانات العملاء والمعلومات الشخصية' : 'Privacy Policy - SVC Global\'s commitment to protecting customer data and personal information' %>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1><%= lang === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy' %></h1>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <p style="font-size: 0.95rem; color: #666; margin-bottom: 2rem;">
+          <%= lang === 'ar' 
+            ? 'آخر تحديث: مارس 2026' 
+            : 'Last Updated: March 2026'
+          %>
+        </p>
+
+        <div style="line-height: 1.8; color: #444;">
+          <!-- Section 1 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'مقدمة' : '1. Introduction' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'نحن في SVC Global Fz-LLC نلتزم بحماية خصوصيتك. تشرح هذه السياسة كيف نجمع وننظم ونستخدم معلوماتك الشخصية.' 
+                : 'At SVC Global Fz-LLC, we are committed to protecting your privacy. This policy explains how we collect, organize, and use your personal information.'
+              %>
+            </p>
+          </div>
+
+          <!-- Section 2 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'المعلومات التي نجمعها' : '2. Information We Collect' %>
+            </h2>
+            <p><%= lang === 'ar' ? 'قد نجمع الأنواع التالية من المعلومات:' : 'We may collect the following types of information:' %></p>
+            <ul style="margin: 1rem 0 1rem 2rem;">
+              <li><%= lang === 'ar' ? 'المعلومات الشخصية: الاسم، البريد الإلكتروني، رقم الهاتف، العنوان' : 'Personal Information: Name, email, phone number, address' %></li>
+              <li><%= lang === 'ar' ? 'معلومات الدفع: بيانات بطاقة الائتمان (معالجة آمنة)' : 'Payment Information: Credit card details (securely processed)' %></li>
+              <li><%= lang === 'ar' ? 'معلومات الطلب: سجل الطلبات والمنتجات المشتراة' : 'Order Information: Order history and purchased items' %></li>
+              <li><%= lang === 'ar' ? 'معلومات الاستخدام: كيفية استخدامك للموقع' : 'Usage Information: How you use our website' %></li>
+            </ul>
+          </div>
+
+          <!-- Section 3 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'كيف نستخدم معلوماتك' : '3. How We Use Your Information' %>
+            </h2>
+            <p><%= lang === 'ar' ? 'نستخدم معلوماتك الشخصية لـ:' : 'We use your information to:' %></p>
+            <ul style="margin: 1rem 0 1rem 2rem;">
+              <li><%= lang === 'ar' ? 'معالجة طلباتك وتسليم المنتجات' : 'Process your orders and deliver products' %></li>
+              <li><%= lang === 'ar' ? 'تقديم خدمة عملاء ممتازة' : 'Provide excellent customer service' %></li>
+              <li><%= lang === 'ar' ? 'إرسال تحديثات عن طلباتك' : 'Send order updates' %></li>
+              <li><%= lang === 'ar' ? 'تحسين تجربة التسوق لديك' : 'Improve your shopping experience' %></li>
+              <li><%= lang === 'ar' ? 'إرسال معلومات العروض والأخبار (بناءً على موافقتك)' : 'Send promotional offers (with your consent)' %></li>
+            </ul>
+          </div>
+
+          <!-- Section 4 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'حماية المعلومات' : '4. Information Security' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'نستخدم تقنيات التشفير وتدابير الأمان المتقدمة لحماية معلوماتك الشخصية. لا نبيع أو نشارك بياناتك مع أطراف ثالثة دون موافقتك.' 
+                : 'We use encryption and advanced security measures to protect your personal information. We do not sell or share your data with third parties without your consent.'
+              %>
+            </p>
+          </div>
+
+          <!-- Section 5 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'ملفات تعريف الارتباط' : '5. Cookies' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'قد يستخدم موقعنا ملفات تعريف الارتباط لتحسين تجربتك. يمكنك تعطيل ملفات تعريف الارتباط من خلال إعدادات متصفحك.' 
+                : 'Our website may use cookies to improve your experience. You can disable cookies through your browser settings.'
+              %>
+            </p>
+          </div>
+
+          <!-- Section 6 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'حقوقك' : '6. Your Rights' %>
+            </h2>
+            <p><%= lang === 'ar' ? 'لديك الحق في:' : 'You have the right to:' %></p>
+            <ul style="margin: 1rem 0 1rem 2rem;">
+              <li><%= lang === 'ar' ? 'الوصول إلى بيانات شخصية عنك' : 'Access your personal data' %></li>
+              <li><%= lang === 'ar' ? 'طلب تصحيح المعلومات غير الدقيقة' : 'Request correction of inaccurate information' %></li>
+              <li><%= lang === 'ar' ? 'طلب حذف بيانات شخصية' : 'Request deletion of personal data' %></li>
+              <li><%= lang === 'ar' ? 'الاعتراض على معالجة بيانات محددة' : 'Object to certain processing' %></li>
+            </ul>
+          </div>
+
+          <!-- Section 7 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'الاتصال بنا' : '7. Contact Us' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'إذا كان لديك أسئلة حول سياسة الخصوصية أو بيانات شخصية عنك، يرجى الاتصال بنا:' 
+                : 'If you have questions about this privacy policy or your personal data, please contact us:'
+              %>
+            </p>
+            <p style="margin-top: 1rem;">
+              <strong><%= lang === 'ar' ? 'البريد الإلكتروني:' : 'Email:' %></strong> <a href="mailto:privacy@svcglobal.ae">privacy@svcglobal.ae</a><br>
+              <strong><%= lang === 'ar' ? 'الهاتف:' : 'Phone:' %></strong> <a href="tel:+971557129912">+971-55-712-9912</a>
+            </p>
+          </div>
+
+          <!-- Section 8 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'التغييرات على هذه السياسة' : '8. Changes to This Policy' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'قد نحدث سياسة الخصوصية هذه من وقت لآخر. سيتم إخطارك بأي تغييرات مهمة عبر البريد الإلكتروني أو إشعار على موقعنا.' 
+                : 'We may update this privacy policy from time to time. We will notify you of any significant changes via email or notice on our website.'
+              %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'ar' ? 'اتصل بنا - تواصل مع SVC Global للاستفسار عن المنتجات والطلبات. البريد الإلكتروني: info@svcglobal.ae الهاتف: +971-55-712-9912' : 'Contact SVC Global - Get in touch for inquiries about luxury products. Email: info@svcglobal.ae Phone: +971-55-712-9912' %>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1><%= lang === 'ar' ? 'اتصل بنا' : 'Contact Us' %></h1>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <p style="font-size: 1.1rem; color: #666;">
+          <%= lang === 'ar' 
+            ? 'هل لديك أسئلة أو استفسارات؟ نحن هنا للمساعدة. تواصل معنا بأي من الطرق المتاحة أدناه.' 
+            : 'Have questions or inquiries? We\'re here to help. Contact us through any of the available methods below.'
+          %>
+        </p>
+      </div>
+
+      <div class="contact-container">
+        <!-- Contact Form -->
+        <form class="contact-form" onsubmit="handleContactSubmit(event)">
+          <h3 style="margin-bottom: 1.5rem; color: var(--color-primary);">
+            <%= lang === 'ar' ? 'أرسل لنا رسالة' : 'Send us a Message' %>
+          </h3>
+
+          <div class="form-group">
+            <label for="name"><%= lang === 'ar' ? 'الاسم' : 'Name' %></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email"><%= lang === 'ar' ? 'البريد الإلكتروني' : 'Email' %></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone"><%= lang === 'ar' ? 'رقم الهاتف' : 'Phone' %></label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="form-group">
+            <label for="subject"><%= lang === 'ar' ? 'الموضوع' : 'Subject' %></label>
+            <select id="subject" name="subject" required>
+              <option value="">-- <%= lang === 'ar' ? 'اختر موضوعاً' : 'Select a subject' %> --</option>
+              <option value="product"><%= lang === 'ar' ? 'استفسار عن المنتجات' : 'Product Inquiry' %></option>
+              <option value="order"><%= lang === 'ar' ? 'مشكلة في الطلب' : 'Order Issue' %></option>
+              <option value="warranty"><%= lang === 'ar' ? 'الضمان والإصلاح' : 'Warranty & Repair' %></option>
+              <option value="shipping"><%= lang === 'ar' ? 'مشكلة في الشحن' : 'Shipping Issue' %></option>
+              <option value="general"><%= lang === 'ar' ? 'استفسار عام' : 'General Inquiry' %></option>
+              <option value="partnership"><%= lang === 'ar' ? 'فرص الشراكة' : 'Partnership' %></option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message"><%= lang === 'ar' ? 'الرسالة' : 'Message' %></label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <%= lang === 'ar' ? 'إرسال الرسالة' : 'Send Message' %>
+          </button>
+        </form>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <!-- Phone -->
+          <div class="contact-info-item">
+            <h3>📞 <%= lang === 'ar' ? 'الهاتف' : 'Phone' %></h3>
+            <p><strong><%= lang === 'ar' ? 'رقم الاتصال الرئيسي:' : 'Main Line:' %></strong></p>
+            <p><a href="tel:+971557129912">+971-55-712-9912</a></p>
+            <p style="font-size: 0.9rem; color: #999; margin-top: 0.5rem;">
+              <%= lang === 'ar' ? 'متاح من السبت إلى الخميس، 9 ص - 6 م' : 'Available Saturday to Thursday, 9 AM - 6 PM' %>
+            </p>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-info-item">
+            <h3>✉️ <%= lang === 'ar' ? 'البريد الإلكتروني' : 'Email' %></h3>
+            <p><strong><%= lang === 'ar' ? 'البريد الرئيسي:' : 'Main Email:' %></strong></p>
+            <p><a href="mailto:info@svcglobal.ae">info@svcglobal.ae</a></p>
+            <p style="font-size: 0.9rem; color: #999; margin-top: 0.5rem;">
+              <%= lang === 'ar' ? 'سنرد على بريدك في غضون 24 ساعة' : 'We\'ll reply to your email within 24 hours' %>
+            </p>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="contact-info-item">
+            <h3>💬 <%= lang === 'ar' ? 'واتساب' : 'WhatsApp' %></h3>
+            <p><strong><%= lang === 'ar' ? 'اتصل بنا مباشرة:' : 'Chat with us directly:' %></strong></p>
+            <p>
+              <a href="https://wa.me/971557129912" target="_blank" class="btn btn-secondary" style="display: inline-block;">
+                <%= lang === 'ar' ? 'فتح واتساب' : 'Open WhatsApp' %>
+              </a>
+            </p>
+            <p style="font-size: 0.9rem; color: #999; margin-top: 0.5rem;">
+              <%= lang === 'ar' ? 'متاح على مدار الساعة' : 'Available 24/7' %>
+            </p>
+          </div>
+
+          <!-- Location -->
+          <div class="contact-info-item">
+            <h3>📍 <%= lang === 'ar' ? 'الموقع' : 'Location' %></h3>
+            <p><strong><%= lang === 'ar' ? 'المقر الرئيسي:' : 'Headquarters:' %></strong></p>
+            <p>
+              SVC Global Fz-LLC<br>
+              <%= lang === 'ar' ? 'دبي، الإمارات العربية المتحدة' : 'Dubai, United Arab Emirates' %>
+            </p>
+            <p style="font-size: 0.9rem; color: #999; margin-top: 0.5rem;">
+              <%= lang === 'ar' ? 'يمكن الوصول إلى العميل من جميع دول العالم' : 'Serving customers worldwide' %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+      <div style="margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #eee;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">
+          <%= lang === 'ar' ? 'الأسئلة الشائعة' : 'Frequently Asked Questions' %>
+        </h2>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+          <div style="margin-bottom: 2rem;">
+            <h4 style="color: var(--color-gold); margin-bottom: 0.5rem;">
+              <%= lang === 'ar' ? 'هل تشحنون خارج الإمارات؟' : 'Do you ship internationally?' %>
+            </h4>
+            <p>
+              <%= lang === 'ar' 
+                ? 'نعم، نشحن إلى معظم دول العالم. تتوفر خيارات شحن مختلفة حسب الوجهة.' 
+                : 'Yes, we ship to most countries worldwide. Different shipping options are available depending on destination.'
+              %>
+            </p>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <h4 style="color: var(--color-gold); margin-bottom: 0.5rem;">
+              <%= lang === 'ar' ? 'ما هي فترة الضمان؟' : 'What is the warranty period?' %>
+            </h4>
+            <p>
+              <%= lang === 'ar' 
+                ? 'جميع منتجاتنا تأتي بضمان شامل. تتراوح فترة الضمان من سنة إلى ثلاث سنوات حسب نوع المنتج.' 
+                : 'All our products come with comprehensive warranty. Warranty period ranges from 1-3 years depending on product type.'
+              %>
+            </p>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <h4 style="color: var(--color-gold); margin-bottom: 0.5rem;">
+              <%= lang === 'ar' ? 'هل يمكن استرجاع المنتج؟' : 'Can I return a product?' %>
+            </h4>
+            <p>
+              <%= lang === 'ar' 
+                ? 'نعم، لدينا سياسة استرجاع مرنة. يمكنك استرجاع المنتج خلال 30 يوم من التسليم في حالة عدم الرضا.' 
+                : 'Yes, we have a flexible return policy. You can return a product within 30 days of delivery if unsatisfied.'
+              %>
+            </p>
+          </div>
+
+          <div style="margin-bottom: 2rem;">
+            <h4 style="color: var(--color-gold); margin-bottom: 0.5rem;">
+              <%= lang === 'ar' ? 'كم الوقت اللازم للشحن؟' : 'How long does shipping take?' %>
+            </h4>
+            <p>
+              <%= lang === 'ar' 
+                ? 'يعتمد وقت الشحن على الموقع. عادة، الشحن داخل الإمارات يستغرق 1-3 أيام عمل، والشحن الدولي 5-15 يوم عمل.' 
+                : 'Shipping time depends on location. Typically, UAE shipping takes 1-3 business days, international shipping 5-15 business days.'
+              %>
+            </p>
+          </div>
+
+          <div>
+            <h4 style="color: var(--color-gold); margin-bottom: 0.5rem;">
+              <%= lang === 'ar' ? 'هل المنتجات أصلية؟' : 'Are the products authentic?' %>
+            </h4>
+            <p>
+              <%= lang === 'ar' 
+                ? 'بالتأكيد. جميع منتجاتنا أصلية 100% من الموزعين المعتمدين. نحن نتعامل فقط مع العلامات التجارية الموثوقة.' 
+                : 'Absolutely. All our products are 100% authentic from authorized distributors. We only deal with reputable brands.'
+              %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+
+  <script src="/js/main.js"></script>
+  <script>
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      alert('<%= lang === "ar" ? "شكراً لرسالتك. سنرد عليك قريباً." : "Thank you for your message. We will get back to you soon." %>');
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>

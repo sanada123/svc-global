@@ -1,0 +1,43 @@
+[
+  {
+    "id": "luxury-furniture",
+    "name": { "ar": "أثاث فاخر", "en": "Luxury Furniture" },
+    "description": { "ar": "مجموعة حصرية من الأثاث الفاخر للحمامات والمساحات الراقية", "en": "An exclusive collection of luxury furniture for bathrooms and upscale spaces" },
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-oval-bathtub.jpg",
+    "subcategories": [
+      { "id": "bathtubs", "name": { "ar": "أحواض استحمام", "en": "Bathtubs" } },
+      { "id": "washbasins", "name": { "ar": "أحواض غسيل", "en": "Washbasins" } },
+      { "id": "cabinets", "name": { "ar": "خزائن", "en": "Cabinets" } },
+      { "id": "freestanding", "name": { "ar": "أحواض قائمة", "en": "Freestanding" } },
+      { "id": "mirrors", "name": { "ar": "مرايا", "en": "Mirrors" } },
+      { "id": "accessories", "name": { "ar": "إكسسوارات", "en": "Accessories" } }
+    ]
+  },
+  {
+    "id": "writing-instruments",
+    "name": { "ar": "أدوات الكتابة", "en": "Writing Instruments" },
+    "description": { "ar": "أقلام فاخرة مصنوعة يدوياً من أنبل المواد والأحجار الكريمة", "en": "Luxury pens handcrafted from the finest materials and precious stones" },
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122339.png",
+    "subcategories": [
+      { "id": "pens", "name": { "ar": "أقلام", "en": "Pens" } }
+    ]
+  },
+  {
+    "id": "prayer-beads",
+    "name": { "ar": "مسابح", "en": "Prayer Beads" },
+    "description": { "ar": "مسابح فاخرة من أحجار طبيعية مع تفاصيل من الذهب والألماس", "en": "Luxury prayer beads from natural stones with gold and diamond details" },
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122444.png",
+    "subcategories": [
+      { "id": "tasbih", "name": { "ar": "مسابح", "en": "Prayer Beads" } }
+    ]
+  },
+  {
+    "id": "watches",
+    "name": { "ar": "ساعات", "en": "Watches" },
+    "description": { "ar": "ساعات فاخرة بآليات سويسرية وتصاميم حصرية", "en": "Luxury watches with Swiss mechanisms and exclusive designs" },
+    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "subcategories": [
+      { "id": "watches", "name": { "ar": "ساعات", "en": "Watches" } }
+    ]
+  }
+]

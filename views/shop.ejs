@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'ar' ? 'تسوق المنتجات الفاخرة - SVC Global توفر أثاث فاخر، أقلام مميزة، مسابح فاخرة، وساعات سويسرية' : 'Shop Luxury Products - SVC Global offers premium furniture, luxury pens, prayer beads, and Swiss watches' %>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1><%= lang === 'ar' ? 'المتجر' : 'Shop' %></h1>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <!-- Toolbar -->
+      <div class="shop-toolbar">
+        <div class="results-count">
+          <%= lang === 'ar' ? 'تم العثور على' : 'Found' %> <strong><%= products.length %></strong>
+          <%= lang === 'ar' ? 'منتج' : 'products' %>
+        </div>
+
+        <button id="mobile-filter-toggle" class="btn btn-secondary mobile-filter-toggle">
+          <%= lang === 'ar' ? 'تصفية' : 'Filter' %>
+        </button>
+
+        <div class="search-wrapper">
+          <label for="search-input" class="sr-only"><%= lang === 'ar' ? 'ابحث عن منتج' : 'Search products' %></label>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="<%= lang === 'ar' ? 'ابحث عن منتج...' : 'Search products...' %>"
+            class="search-input"
+          >
+        </div>
+
+        <div class="sort-wrapper">
+          <label for="sort-select" class="sr-only"><%= lang === 'ar' ? 'ترتيب' : 'Sort' %></label>
+          <select id="sort-select" class="sort-select">
+            <option value=""><%= lang === 'ar' ? 'الترتيب الافتراضي' : 'Default' %></option>
+            <option value="price-asc"><%= lang === 'ar' ? 'السعر: من الأقل إلى الأعلى' : 'Price: Low to High' %></option>
+            <option value="price-desc"><%= lang === 'ar' ? 'السعر: من الأعلى إلى الأقل' : 'Price: High to Low' %></option>
+            <option value="name"><%= lang === 'ar' ? 'الاسم: أ-ي' : 'Name: A-Z' %></option>
+          </select>
+        </div>
+      </div>
+
+      <div class="shop-container">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar" id="sidebar-filters">
+          <button class="sidebar-close" id="sidebar-close" aria-label="Close filters">
+            ×
+          </button>
+          <h3><%= lang === 'ar' ? 'تصفية' : 'Filter' %></h3>
+
+          <!-- Category Filter -->
+          <div class="filter-group">
+            <h4 class="filter-heading">
+              <%= lang === 'ar' ? 'الفئات' : 'Categories' %>
+            </h4>
+            <% categories.forEach(cat => { %>
+              <div class="filter-item">
+                <input 
+                  type="checkbox" 
+                  id="cat-<%= cat.id %>" 
+                  value="<%= cat.id %>"
+                  class="category-filter"
+                  <%= activeCategory === cat.id ? 'checked' : '' %>
+                >
+                <label for="cat-<%= cat.id %>"><%= t(cat.name) %></label>
+              </div>
+            <% }); %>
+          </div>
+
+          <!-- In Stock Filter -->
+          <div class="filter-group">
+            <h4 class="filter-heading">
+              <%= lang === 'ar' ? 'التوفر' : 'Availability' %>
+            </h4>
+            <div class="filter-item">
+              <input type="checkbox" id="in-stock" value="true" class="in-stock-filter">
+              <label for="in-stock"><%= lang === 'ar' ? 'المتوفر فقط' : 'In Stock Only' %></label>
+            </div>
+          </div>
+
+          <div class="filter-actions">
+            <button class="btn btn-secondary btn-block" onclick="resetFilters()">
+              <%= lang === 'ar' ? 'إعادة تعيين' : 'Reset Filters' %>
+            </button>
+          </div>
+        </aside>
+
+        <!-- Products Grid -->
+        <main id="main-content">
+          <% if (products.length > 0) { %>
+            <div class="products-grid">
+              <% products.forEach(product => { %>
+                <div class="product-card">
+                  <div class="product-image">
+                    <img src="<%= product.image %>" alt="<%= t(product.name) %>" width="300" height="300" loading="lazy">
+                    <% if (!product.inStock) { %>
+                      <span class="product-badge product-badge-outofstock">
+                        <%= lang === 'ar' ? 'غير متوفر' : 'Out of Stock' %>
+                      </span>
+                    <% } %>
+                  </div>
+                  <div class="product-info">
+                    <div class="product-category">
+                      <%= t(categories.find(c => c.id === product.category)?.name || '') %>
+                    </div>
+                    <h3 class="product-name"><%= t(product.name) %></h3>
+                    <div class="product-price"><%= formatPrice(product.price) %></div>
+                    <div class="product-actions">
+                      <button
+                        class="btn btn-small btn-primary add-to-cart"
+                        data-id="<%= product.id %>"
+                        <%= !product.inStock ? 'disabled' : '' %>
+                      >
+                        <%= lang === 'ar' ? 'أضف للسلة' : 'Add to Cart' %>
+                      </button>
+                      <a href="/product/<%= product.id %><%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>"
+                         class="btn btn-small btn-secondary">
+                        <%= lang === 'ar' ? 'التفاصيل' : 'Details' %>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              <% }); %>
+            </div>
+          <% } else { %>
+            <div class="no-products">
+              <h3><%= lang === 'ar' ? 'لم يتم العثور على منتجات' : 'No Products Found' %></h3>
+              <p class="no-products-text">
+                <%= lang === 'ar' ? 'حاول تغيير معايير البحث أو التصفية' : 'Try adjusting your search or filter criteria' %>
+              </p>
+              <a href="/shop<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-primary">
+                <%= lang === 'ar' ? 'عرض جميع المنتجات' : 'View All Products' %>
+              </a>
+            </div>
+          <% } %>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // Debounce search input
+    const searchInput = document.getElementById('search-input');
+    let searchTimeout;
+
+    searchInput?.addEventListener('input', function(e) {
+      clearTimeout(searchTimeout);
+      const query = e.target.value.trim();
+
+      searchTimeout = setTimeout(() => {
+        if (query.length > 0) {
+          const url = new URL(window.location);
+          url.searchParams.set('search', query);
+          window.location = url.toString();
+        } else if (query.length === 0 && new URL(window.location).searchParams.has('search')) {
+          const url = new URL(window.location);
+          url.searchParams.delete('search');
+          window.location = url.toString();
+        }
+      }, 300);
+    });
+
+    // Mobile filter toggle
+    const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
+    const sidebarFilters = document.getElementById('sidebar-filters');
+    const sidebarClose = document.getElementById('sidebar-close');
+
+    mobileFilterToggle?.addEventListener('click', () => {
+      sidebarFilters.classList.add('sidebar-open');
+      document.body.style.overflow = 'hidden';
+    });
+
+    sidebarClose?.addEventListener('click', () => {
+      sidebarFilters.classList.remove('sidebar-open');
+      document.body.style.overflow = '';
+    });
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!sidebarFilters?.contains(e.target) && !mobileFilterToggle?.contains(e.target)) {
+        sidebarFilters?.classList.remove('sidebar-open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Sort functionality
+    function updateSort() {
+      const sort = document.getElementById('sort-select').value;
+      const url = new URL(window.location);
+      if (sort) {
+        url.searchParams.set('sort', sort);
+      } else {
+        url.searchParams.delete('sort');
+      }
+      window.location = url.toString();
+    }
+
+    document.getElementById('sort-select')?.addEventListener('change', updateSort);
+
+    // Reset filters
+    function resetFilters() {
+      document.querySelectorAll('.category-filter, .in-stock-filter').forEach(el => el.checked = false);
+      window.location = '/shop?lang=<%= lang %>';
+    }
+
+    // Category filter
+    document.querySelectorAll('.category-filter').forEach(el => {
+      el.addEventListener('change', function() {
+        if (this.checked) {
+          window.location = '/shop?category=' + this.value + '&lang=<%= lang %>';
+        }
+      });
+    });
+
+    // In stock filter
+    document.getElementById('in-stock')?.addEventListener('change', function() {
+      const url = new URL(window.location);
+      if (this.checked) {
+        url.searchParams.set('inStock', 'true');
+      } else {
+        url.searchParams.delete('inStock');
+      }
+      window.location = url.toString();
+    });
+  </script>
+</body>
+</html>

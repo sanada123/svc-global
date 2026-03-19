@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'ar' ? 'شروط الخدمة - اقرأ الشروط والأحكام الكاملة لاستخدام متجر SVC Global وسياسات الشراء والدفع والشحن' : 'Terms of Service - Complete conditions for using SVC Global including purchase, payment, and shipping policies' %>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1><%= lang === 'ar' ? 'شروط الخدمة' : 'Terms of Service' %></h1>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <p style="font-size: 0.95rem; color: #666; margin-bottom: 2rem;">
+          <%= lang === 'ar' 
+            ? 'آخر تحديث: مارس 2026' 
+            : 'Last Updated: March 2026'
+          %>
+        </p>
+
+        <div style="line-height: 1.8; color: #444;">
+          <!-- Section 1 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'قبول الشروط' : '1. Acceptance of Terms' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'بزيارتك وسط استخدامك لموقع SVC Global، فأنت توافق على الالتزام بهذه الشروط والأحكام. إذا كنت لا توافق على أي جزء من هذه الشروط، يرجى عدم استخدام الموقع.' 
+                : 'By visiting and using the SVC Global website, you agree to comply with these terms and conditions. If you do not agree with any part of these terms, please do not use the site.'
+              %>
+            </p>
+          </div>
+
+          <!-- Section 2 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'سياسة الشراء' : '2. Purchase Policy' %>
+            </h2>
+            <p><%= lang === 'ar' ? 'شروط الشراء:' : 'Purchase conditions:' %></p>
+            <ul style="margin: 1rem 0 1rem 2rem;">
+              <li><%= lang === 'ar' ? 'يجب أن يكون المشتري بالغاً (18 سنة فأكثر)' : 'Buyer must be 18 years or older' %></li>
+              <li><%= lang === 'ar' ? 'يجب أن تكون معلومات الطلب صحيحة وكاملة' : 'Order information must be accurate and complete' %></li>
+              <li><%= lang === 'ar' ? 'الأسعار عرضة للتغيير دون إشعار مسبق' : 'Prices are subject to change without notice' %></li>
+              <li><%= lang === 'ar' ? 'نحتفظ بحق قبول أو رفض أي طلب' : 'We reserve the right to accept or reject any order' %></li>
+            </ul>
+          </div>
+
+          <!-- Section 3 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'سياسة الدفع' : '3. Payment Policy' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'نقبل جميع طرق الدفع الآمنة بما في ذلك بطاقات الائتمان والتحويل البنكي والمحافظ الرقمية. جميع المعاملات معالجة بشكل آمن وآمن.' 
+                : 'We accept all secure payment methods including credit cards, bank transfers, and digital wallets. All transactions are processed securely.'
+              %>
+            </p>
+          </div>
+
+          <!-- Section 4 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'سياسة الشحن' : '4. Shipping Policy' %>
+            </h2>
+            <p><%= lang === 'ar' ? 'معلومات الشحن:' : 'Shipping Information:' %></p>
+            <ul style="margin: 1rem 0 1rem 2rem;">
+              <li><%= lang === 'ar' ? 'الشحن مجاني للطلبات فوق 500 درهم في الإمارات' : 'Free shipping for orders over AED 500 in UAE' %></li>
+              <li><%= lang === 'ar' ? 'وقت الشحن: 1-3 أيام عمل (محلي)، 5-15 يوم عمل (دولي)' : 'Shipping time: 1-3 business days (local), 5-15 business days (international)' %></li>
+              <li><%= lang === 'ar' ? 'نتحمل مسؤولية الشحن حتى وصول المنتج' : 'We are responsible for shipping until product delivery' %></li>
+              <li><%= lang === 'ar' ? 'التسليم توقيع مطلوب للمنتجات الثمينة' : 'Signature required for valuable items' %></li>
+            </ul>
+          </div>
+
+          <!-- Section 5 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'سياسة الإرجاع' : '5. Return Policy' %>
+            </h2>
+            <p><%= lang === 'ar' ? 'حقوق الإرجاع:' : 'Return Rights:' %></p>
+            <ul style="margin: 1rem 0 1rem 2rem;">
+              <li><%= lang === 'ar' ? 'يمكن إرجاع المنتجات خلال 30 يوماً من التسليم' : 'Products can be returned within 30 days of delivery' %></li>
+              <li><%= lang === 'ar' ? 'يجب أن تكون المنتجات في حالتها الأصلية وغير مستخدمة' : 'Products must be in original, unused condition' %></li>
+              <li><%= lang === 'ar' ? 'سيتم استرجاع المبلغ بعد 7-10 أيام عمل' : 'Refund will be processed within 7-10 business days' %></li>
+              <li><%= lang === 'ar' ? 'مصاريف الإرجاع من مسؤوليتك' : 'Return shipping costs are your responsibility' %></li>
+            </ul>
+          </div>
+
+          <!-- Section 6 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'الضمان' : '6. Warranty' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'جميع المنتجات تأتي بضمان شامل. تتراوح فترة الضمان من سنة إلى ثلاث سنوات حسب نوع المنتج. الضمان يغطي العيوب والأعطال الناجمة عن الصنع، وليس الاستخدام غير السليم أو التلف الناتج عن الحوادث.' 
+                : 'All products come with comprehensive warranty. Warranty period ranges from 1-3 years depending on product type. Warranty covers defects and manufacturing faults, not misuse or accidental damage.'
+              %>
+            </p>
+          </div>
+
+          <!-- Section 7 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'مسؤولية المستخدم' : '7. User Responsibilities' %>
+            </h2>
+            <p><%= lang === 'ar' ? 'أنت مسؤول عن:' : 'You are responsible for:' %></p>
+            <ul style="margin: 1rem 0 1rem 2rem;">
+              <li><%= lang === 'ar' ? 'صحة وسلامة المعلومات التي تقدمها' : 'Accuracy and security of information you provide' %></li>
+              <li><%= lang === 'ar' ? 'عدم استخدام الموقع للأنشطة غير القانونية' : 'Not using the site for illegal activities' %></li>
+              <li><%= lang === 'ar' ? 'احترام الملكية الفكرية' : 'Respecting intellectual property' %></li>
+              <li><%= lang === 'ar' ? 'الامتثال لجميع القوانين واللوائح المعمول بها' : 'Complying with all applicable laws' %></li>
+            </ul>
+          </div>
+
+          <!-- Section 8 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'تحديد المسؤولية' : '8. Limitation of Liability' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'نحن غير مسؤولين عن الأضرار غير المباشرة أو العرضية الناتجة عن استخدام الموقع أو المنتجات.' 
+                : 'We are not responsible for indirect or incidental damages resulting from use of the site or products.'
+              %>
+            </p>
+          </div>
+
+          <!-- Section 9 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'التعديلات على الشروط' : '9. Changes to Terms' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'نحتفظ بحق تعديل هذه الشروط في أي وقت. سيتم إخطارك بأي تغييرات مهمة عبر البريد الإلكتروني أو إشعار على الموقع.' 
+                : 'We reserve the right to modify these terms at any time. You will be notified of significant changes via email or notice on the website.'
+              %>
+            </p>
+          </div>
+
+          <!-- Section 10 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'القانون الحاكم' : '10. Governing Law' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'تخضع هذه الشروط وجميع المعاملات للقوانين المعمول بها في دولة الإمارات العربية المتحدة.' 
+                : 'These terms and all transactions are governed by the laws of the United Arab Emirates.'
+              %>
+            </p>
+          </div>
+
+          <!-- Section 11 -->
+          <div style="margin-bottom: 2rem;">
+            <h2 style="color: var(--color-primary); margin-bottom: 1rem;">
+              <%= lang === 'ar' ? 'الاتصال بنا' : '11. Contact Us' %>
+            </h2>
+            <p>
+              <%= lang === 'ar' 
+                ? 'إذا كان لديك أسئلة حول هذه الشروط، يرجى الاتصال بنا:' 
+                : 'If you have questions about these terms, please contact us:'
+              %>
+            </p>
+            <p style="margin-top: 1rem;">
+              <strong><%= lang === 'ar' ? 'البريد الإلكتروني:' : 'Email:' %></strong> <a href="mailto:support@svcglobal.ae">support@svcglobal.ae</a><br>
+              <strong><%= lang === 'ar' ? 'الهاتف:' : 'Phone:' %></strong> <a href="tel:+971557129912">+971-55-712-9912</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>

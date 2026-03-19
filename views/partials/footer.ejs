@@ -1,0 +1,111 @@
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-content">
+      <!-- About Column -->
+      <div class="footer-column">
+        <h3><%= lang === 'ar' ? 'من نحن' : 'About Us' %></h3>
+        <p><%= lang === 'ar' ? 'SVC Global Fz-LLC هي شركة متخصصة في بيع المنتجات الفاخرة والحصرية. نقدم أفضل العلامات التجارية العالمية في مجال الأثاث الفاخر والأقلام والمجوهرات والساعات.' : 'SVC Global Fz-LLC specializes in luxury and exclusive products. We offer the finest international brands in luxury furniture, writing instruments, jewelry, and watches.' %></p>
+        <div class="footer-links">
+          <a href="<%= lang === 'ar' ? '/about?lang=ar' : '/about?lang=en' %>"><%= lang === 'ar' ? 'اقرأ أكثر' : 'Read More' %></a>
+          <a href="<%= lang === 'ar' ? '/?lang=ar#careers' : '/?lang=en#careers' %>"><%= lang === 'ar' ? 'الوظائف' : 'Careers' %></a>
+        </div>
+      </div>
+
+      <!-- Customer Service Column -->
+      <div class="footer-column">
+        <h3><%= lang === 'ar' ? 'خدمة العملاء' : 'Customer Service' %></h3>
+        <ul>
+          <li><a href="<%= lang === 'ar' ? '/shop?lang=ar' : '/shop?lang=en' %>"><%= lang === 'ar' ? 'تصفح المنتجات' : 'Browse Products' %></a></li>
+          <li><a href="<%= lang === 'ar' ? '/terms?lang=ar' : '/terms?lang=en' %>"><%= lang === 'ar' ? 'سياسة الاسترجاع' : 'Return Policy' %></a></li>
+          <li><a href="<%= lang === 'ar' ? '/terms?lang=ar' : '/terms?lang=en' %>"><%= lang === 'ar' ? 'شروط الشحن' : 'Shipping Info' %></a></li>
+          <li><a href="<%= lang === 'ar' ? '/contact?lang=ar' : '/contact?lang=en' %>"><%= lang === 'ar' ? 'الإصلاح والصيانة' : 'Repairs & Service' %></a></li>
+          <li><a href="<%= lang === 'ar' ? '/contact?lang=ar' : '/contact?lang=en' %>"><%= lang === 'ar' ? 'ضمان المنتج' : 'Product Warranty' %></a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="footer-column">
+        <h3><%= lang === 'ar' ? 'اتصل بنا' : 'Contact' %></h3>
+        <p>
+          <strong><%= lang === 'ar' ? 'الهاتف:' : 'Phone:' %></strong><br>
+          <a href="tel:+971557129912">+971-55-712-9912</a>
+        </p>
+        <p>
+          <strong><%= lang === 'ar' ? 'البريد الإلكتروني:' : 'Email:' %></strong><br>
+          <a href="mailto:info@svcglobal.ae">info@svcglobal.ae</a>
+        </p>
+        <p>
+          <strong><%= lang === 'ar' ? 'الموقع:' : 'Location:' %></strong><br>
+          <%= lang === 'ar' ? 'دبي، الإمارات العربية المتحدة' : 'Dubai, UAE' %>
+        </p>
+        <p style="margin-top: 1rem;">
+          <strong><%= lang === 'ar' ? 'الدردشة المباشرة:' : 'Live Chat:' %></strong><br>
+          <a href="https://wa.me/971557129912" target="_blank" rel="noopener noreferrer" title="WhatsApp">WhatsApp</a>
+        </p>
+      </div>
+
+      <!-- Newsletter Column -->
+      <div class="footer-column">
+        <h3><%= lang === 'ar' ? 'النشرة البريدية' : 'Newsletter' %></h3>
+        <p><%= lang === 'ar' ? 'اشترك واحصل على آخر الأخبار والعروض الحصرية' : 'Subscribe to get latest news and exclusive offers' %></p>
+        <form class="newsletter-form" aria-label="<%= lang === 'ar' ? 'نموذج الاشتراك في النشرة البريدية' : 'Newsletter subscription form' %>" onsubmit="event.preventDefault(); handleNewsletterSubmit(event, '<%= lang %>');">
+          <label for="newsletter-email"><%= lang === 'ar' ? 'بريدك الإلكتروني' : 'Your email' %></label>
+          <input
+            id="newsletter-email"
+            type="email"
+            placeholder="<%= lang === 'ar' ? 'example@email.com' : 'example@email.com' %>"
+            required
+          >
+          <button type="submit"><%= lang === 'ar' ? 'اشترك' : 'Subscribe' %></button>
+        </form>
+
+        <h4 style="margin-top: 1.5rem; color: var(--color-gold); font-size: 0.9rem;"><%= lang === 'ar' ? 'تابعنا' : 'Follow Us' %></h4>
+        <div class="social-links">
+          <a href="https://facebook.com/svcglobal" target="_blank" rel="noopener noreferrer" aria-label="<%= lang === 'ar' ? 'تابعنا على فيسبوك' : 'Follow us on Facebook' %>">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com/svcglobal" target="_blank" rel="noopener noreferrer" aria-label="<%= lang === 'ar' ? 'تابعنا على إنستاجرام' : 'Follow us on Instagram' %>">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm3.172-10a3.172 3.172 0 1 1-6.344 0 3.172 3.172 0 0 1 6.344 0zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5.5-5.5a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5z"/>
+            </svg>
+          </a>
+          <a href="https://twitter.com/svcglobal" target="_blank" rel="noopener noreferrer" aria-label="<%= lang === 'ar' ? 'تابعنا على تويتر' : 'Follow us on Twitter' %>">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.953 4.57a10 10 0 002.856-3.215c-1.43.717-2.97 1.2-4.58 1.464 1.647-1.032 2.906-2.656 3.502-4.6a13.643 13.643 0 01-4.328 1.656c-.895-.959-2.17-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 012.792 2.039a5.06 5.06 0 00-.732 2.607c0 1.76.894 3.313 2.25 4.224-.83-.026-1.611-.255-2.291-.637v.064c0 2.486 1.759 4.57 4.114 5.046-.429.115-.883.178-1.351.178-.33 0-.65-.032-.966-.095.657 2.03 2.566 3.506 4.828 3.55-1.747 1.368-3.95 2.185-6.343 2.185-.412 0-.817-.024-1.217-.071 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 SVC Global Fz-LLC. <%= lang === 'ar' ? 'جميع الحقوق محفوظة' : 'All rights reserved' %>.
+        <a href="<%= lang === 'ar' ? '/privacy?lang=ar' : '/privacy?lang=en' %>" rel="noopener noreferrer"><%= lang === 'ar' ? 'سياسة الخصوصية' : 'Privacy Policy' %></a> |
+        <a href="<%= lang === 'ar' ? '/terms?lang=ar' : '/terms?lang=en' %>" rel="noopener noreferrer"><%= lang === 'ar' ? 'شروط الخدمة' : 'Terms of Service' %></a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleNewsletterSubmit(event, lang) {
+  event.preventDefault();
+  const emailInput = event.target.querySelector('input[type="email"]');
+  const email = emailInput.value;
+
+  // Show notification instead of alert
+  const message = lang === 'ar' ? 'شكراً لاشتراكك!' : 'Thank you for subscribing!';
+  if (typeof showNotification === 'function') {
+    showNotification(message, 'success');
+  } else {
+    // Fallback if showNotification doesn't exist
+    console.log(message);
+    alert(message);
+  }
+
+  // Clear the form
+  event.target.reset();
+}
+</script>

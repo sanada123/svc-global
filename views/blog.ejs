@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'ar' ? 'مدونة SVC Global - مقالات عن الفخامة، الساعات الفاخرة، الأثاث الراقي، والأقلام المميزة' : 'SVC Global Blog - Articles about luxury watches, luxury furniture, designer pens, and luxury lifestyle' %>">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1><%= lang === 'ar' ? 'المقالات' : 'Blog' %></h1>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        <!-- Article 1 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=300&fit=crop" alt="<%= lang === 'ar' ? 'فن اختيار الساعة الفاخرة' : 'The Art of Choosing a Luxury Watch' %>">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date"><%= lang === 'ar' ? '15 مارس 2026' : 'March 15, 2026' %></div>
+            <h3><%= lang === 'ar' ? 'فن اختيار الساعة الفاخرة' : 'The Art of Choosing a Luxury Watch' %></h3>
+            <p>
+              <%= lang === 'ar' 
+                ? 'الساعة الفاخرة ليست مجرد أداة لقياس الوقت، بل هي بيان عن الأسلوب والذوق. تعرف على العوامل الأساسية التي تجعل الساعة استثمارًا حكيمًا.' 
+                : 'A luxury watch is more than just a timekeeping tool - it\'s a statement of style and taste. Learn the key factors that make a watch a wise investment.'
+              %>
+            </p>
+            <a href="#"><%= lang === 'ar' ? 'اقرأ المزيد' : 'Read More' %></a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1591290621749-f306ca788975?w=500&h=300&fit=crop" alt="<%= lang === 'ar' ? 'تصميم الحمام الفاخر' : 'Designing Your Luxury Bathroom' %>">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date"><%= lang === 'ar' ? '10 مارس 2026' : 'March 10, 2026' %></div>
+            <h3><%= lang === 'ar' ? 'تصميم الحمام الفاخر' : 'Designing Your Luxury Bathroom' %></h3>
+            <p>
+              <%= lang === 'ar' 
+                ? 'الحمام الفاخر هو ملاذ شخصي حيث يمكنك الاسترخاء والتجدد. اكتشف كيفية تحويل حمامك إلى واحة فاخرة مع الأثاث والتصاميم الحصرية.' 
+                : 'A luxury bathroom is a personal sanctuary where you can relax and rejuvenate. Discover how to transform your bathroom into an exclusive oasis.'
+              %>
+            </p>
+            <a href="#"><%= lang === 'ar' ? 'اقرأ المزيد' : 'Read More' %></a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1450648921556-11a19d654956?w=500&h=300&fit=crop" alt="<%= lang === 'ar' ? 'قيمة الأقلام الفاخرة' : 'The Value of Luxury Pens' %>">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date"><%= lang === 'ar' ? '5 مارس 2026' : 'March 5, 2026' %></div>
+            <h3><%= lang === 'ar' ? 'قيمة الأقلام الفاخرة' : 'The Value of Luxury Pens' %></h3>
+            <p>
+              <%= lang === 'ar' 
+                ? 'القلم الفاخر ليس مجرد أداة كتابة بل هو تحفة فنية قابلة للاستخدام. تعرف على لماذا يختار الكتاب والمتخصصون الأقلام الفاخرة المصنوعة يدويًا.' 
+                : 'A luxury pen is not just a writing tool but a usable work of art. Learn why writers and professionals choose handcrafted luxury pens.'
+              %>
+            </p>
+            <a href="#"><%= lang === 'ar' ? 'اقرأ المزيد' : 'Read More' %></a>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=300&fit=crop" alt="<%= lang === 'ar' ? 'المسابح الفاخرة والتقاليد' : 'Luxury Prayer Beads and Tradition' %>">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date"><%= lang === 'ar' ? '28 فبراير 2026' : 'February 28, 2026' %></div>
+            <h3><%= lang === 'ar' ? 'المسابح الفاخرة والتقاليد' : 'Luxury Prayer Beads and Tradition' %></h3>
+            <p>
+              <%= lang === 'ar' 
+                ? 'المسابح الفاخرة جمع بين التقليد الروحي والحرفية الاستثنائية. اكتشف جمال الأحجار الطبيعية والذهب في المسابح الفاخرة المصنوعة يدويًا.' 
+                : 'Luxury prayer beads combine spiritual tradition with exceptional craftsmanship. Discover the beauty of natural stones and gold in handcrafted luxury beads.'
+              %>
+            </p>
+            <a href="#"><%= lang === 'ar' ? 'اقرأ المزيد' : 'Read More' %></a>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1543269865-cbdf26a9a001?w=500&h=300&fit=crop" alt="<%= lang === 'ar' ? 'نمط حياة فاخر' : 'A Luxury Lifestyle Guide' %>">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date"><%= lang === 'ar' ? '20 فبراير 2026' : 'February 20, 2026' %></div>
+            <h3><%= lang === 'ar' ? 'نمط حياة فاخر' : 'A Luxury Lifestyle Guide' %></h3>
+            <p>
+              <%= lang === 'ar' 
+                ? 'الحياة الفاخرة ليست عن الإفراط في الإنفاق بل عن اختيار الجودة والأصالة. تعرف على المبادئ الأساسية لنمط الحياة الفاخر والمستدام.' 
+                : 'A luxury lifestyle is not about excessive spending but choosing quality and authenticity. Learn the principles of sustainable luxury living.'
+              %>
+            </p>
+            <a href="#"><%= lang === 'ar' ? 'اقرأ المزيد' : 'Read More' %></a>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&h=300&fit=crop" alt="<%= lang === 'ar' ? 'رعاية المنتجات الفاخرة' : 'Caring for Luxury Products' %>">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date"><%= lang === 'ar' ? '15 فبراير 2026' : 'February 15, 2026' %></div>
+            <h3><%= lang === 'ar' ? 'رعاية المنتجات الفاخرة' : 'Caring for Luxury Products' %></h3>
+            <p>
+              <%= lang === 'ar' 
+                ? 'استثمارك في المنتجات الفاخرة يتطلب العناية المناسبة. اتعرف على أفضل الطرق للحفاظ على منتجاتك الفاخرة لتظل جميلة وقيمتها محفوظة.' 
+                : 'Your investment in luxury products requires proper care. Learn the best ways to maintain your luxury items so they remain beautiful and valuable.'
+              %>
+            </p>
+            <a href="#"><%= lang === 'ar' ? 'اقرأ المزيد' : 'Read More' %></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+  <script src="/js/main.js"></script>
+</body>
+</html>
