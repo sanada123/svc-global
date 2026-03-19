@@ -2,6 +2,9 @@ const express = require('express');
 const path = require('path');
 const compression = require('compression');
 const helmet = require('helmet');
+const session = require('express-session');
+const fs = require('fs');
+const bcryptjs = require('bcryptjs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,6 +15,14 @@ app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Session middleware
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'svc-global-secret-key-2026',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 24 * 60 * 60 * 1000 }
+}));
 
 // View engine
 app.set('view engine', 'ejs');
@@ -34,6 +45,12 @@ app.use((req, res, next) => {
     }
     return `AED ${price.toLocaleString('en-AE')}`;
   };
+  next();
+});
+
+// User middleware - pass user info to templates
+app.use((req, res, next) => {
+  res.locals.user = req.session.user || null;
   next();
 });
 
@@ -127,6 +144,175 @@ app.get('/terms', (req, res) => {
   res.render('terms', {
     page: 'terms',
     title: res.locals.lang === 'ar' ? 'شروط الخدمة | SVC Global' : 'Terms of Service | SVC Global'
+  });
+});
+
+// CART ROUTES
+app.get('/cart', (req, res) => {
+  res.render('cart', {
+    page: 'cart',
+    products,
+    title: res.locals.lang === 'ar' ? 'سلة التسوق | SVC Global' : 'Shopping Cart | SVC Global'
+  });
+});
+
+// AUTH ROUTES
+app.get('/login', (req, res) => {
+  if (req.session.user) {
+    return res.redirect('/my-account' + (res.locals.lang === 'ar' ? '?lang=ar' : '?lang=en'));
+  }
+  res.render('login', {
+    page: 'login',
+    title: res.locals.lang === 'ar' ? 'تسجيل الدخول | SVC Global' : 'Login | SVC Global'
+  });
+});
+
+app.get('/register', (req, res) => {
+  if (req.session.user) {
+    return res.redirect('/my-account' + (res.locals.lang === 'ar' ? '?lang=ar' : '?lang=en'));
+  }
+  res.render('register', {
+    page: 'register',
+    title: res.locals.lang === 'ar' ? 'إنشاء حساب | SVC Global' : 'Register | SVC Global'
+  });
+});
+
+app.get('/my-account', (req, res) => {
+  if (!req.session.user) {
+    return res.redirect('/login' + (res.locals.lang === 'ar' ? '?lang=ar' : '?lang=en'));
+  }
+  res.render('my-account', {
+    page: 'my-account',
+    title: res.locals.lang === 'ar' ? 'حسابي | SVC Global' : 'My Account | SVC Global'
+  });
+});
+
+// AUTH API ROUTES
+app.post('/api/auth/register', (req, res) => {
+  const { fullName, email, phone, password, confirmPassword } = req.body;
+  const lang = req.query.lang || 'ar';
+
+  // Validation
+  if (!fullName || !email || !password || !confirmPassword) {
+    return res.status(400).json({
+      success: false,
+      message: lang === 'ar' ? 'جميع الحقول مطلوبة' : 'All fields are required'
+    });
+  }
+
+  if (password !== confirmPassword) {
+    return res.status(400).json({
+      success: false,
+      message: lang === 'ar' ? 'كلمات المرور غير متطابقة' : 'Passwords do not match'
+    });
+  }
+
+  // Load users
+  const usersPath = path.join(__dirname, 'data', 'users.json');
+  let users = [];
+  if (fs.existsSync(usersPath)) {
+    users = JSON.parse(fs.readFileSync(usersPath, 'utf8'));
+  }
+
+  // Check if user exists
+  if (users.find(u => u.email === email)) {
+    return res.status(400).json({
+      success: false,
+      message: lang === 'ar' ? 'البريد الإلكتروني مسجل مسبقاً' : 'Email already registered'
+    });
+  }
+
+  // Hash password
+  const hashedPassword = bcryptjs.hashSync(password, 10);
+
+  // Add new user
+  const newUser = {
+    id: Date.now().toString(),
+    fullName,
+    email,
+    phone: phone || '',
+    password: hashedPassword,
+    createdAt: new Date().toISOString()
+  };
+
+  users.push(newUser);
+  fs.writeFileSync(usersPath, JSON.stringify(users, null, 2));
+
+  // Set session
+  req.session.user = {
+    id: newUser.id,
+    fullName: newUser.fullName,
+    email: newUser.email,
+    phone: newUser.phone
+  };
+
+  res.json({
+    success: true,
+    message: lang === 'ar' ? 'تم التسجيل بنجاح' : 'Registration successful',
+    redirect: lang === 'ar' ? '/my-account?lang=ar' : '/my-account?lang=en'
+  });
+});
+
+app.post('/api/auth/login', (req, res) => {
+  const { email, password } = req.body;
+  const lang = req.query.lang || 'ar';
+
+  if (!email || !password) {
+    return res.status(400).json({
+      success: false,
+      message: lang === 'ar' ? 'البريد والكلمة المرور مطلوبان' : 'Email and password are required'
+    });
+  }
+
+  // Load users
+  const usersPath = path.join(__dirname, 'data', 'users.json');
+  let users = [];
+  if (fs.existsSync(usersPath)) {
+    users = JSON.parse(fs.readFileSync(usersPath, 'utf8'));
+  }
+
+  // Find user
+  const user = users.find(u => u.email === email);
+  if (!user) {
+    return res.status(401).json({
+      success: false,
+      message: lang === 'ar' ? 'البريد أو كلمة المرور غير صحيحة' : 'Invalid email or password'
+    });
+  }
+
+  // Check password
+  if (!bcryptjs.compareSync(password, user.password)) {
+    return res.status(401).json({
+      success: false,
+      message: lang === 'ar' ? 'البريد أو كلمة المرور غير صحيحة' : 'Invalid email or password'
+    });
+  }
+
+  // Set session
+  req.session.user = {
+    id: user.id,
+    fullName: user.fullName,
+    email: user.email,
+    phone: user.phone
+  };
+
+  res.json({
+    success: true,
+    message: lang === 'ar' ? 'تم تسجيل الدخول بنجاح' : 'Login successful',
+    redirect: lang === 'ar' ? '/my-account?lang=ar' : '/my-account?lang=en'
+  });
+});
+
+app.post('/api/auth/logout', (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).json({ success: false, message: 'Logout failed' });
+    }
+    res.json({
+      success: true,
+      message: 'Logout successful',
+      redirect: '/?lang=' + (req.query.lang || 'ar')
+    });
   });
 });
 

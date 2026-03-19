@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'ar' ? 'سلة التسوق - SVC Global' : 'Shopping Cart - SVC Global' %>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .cart-container {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .cart-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .cart-items {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .cart-empty {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .cart-empty svg {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 100px 1fr auto;
+      gap: 1.5rem;
+      align-items: start;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+
+    .cart-item-image {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 4px;
+      background: #f5f5f5;
+    }
+
+    .cart-item-details h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    .cart-item-details .category {
+      font-size: 0.85rem;
+      color: #999;
+      margin-bottom: 0.5rem;
+    }
+
+    .cart-item-details .price {
+      font-size: 1.2rem;
+      color: var(--color-gold);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .quantity-controls button {
+      width: 32px;
+      height: 32px;
+      border: 1px solid #ddd;
+      background: white;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .quantity-controls button:hover {
+      background: #f0f0f0;
+    }
+
+    .quantity-controls input {
+      width: 60px;
+      text-align: center;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .remove-btn {
+      background: #f44336;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .remove-btn:hover {
+      background: #d32f2f;
+    }
+
+    .cart-summary {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      height: fit-content;
+      position: sticky;
+      top: 80px;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .summary-row.total {
+      border-top: 2px solid #ddd;
+      padding-top: 1rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-gold);
+    }
+
+    .checkout-btn {
+      width: 100%;
+      padding: 1rem;
+      background: var(--color-gold);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .checkout-btn:hover {
+      background: #b8860b;
+    }
+
+    .checkout-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .continue-shopping {
+      width: 100%;
+      padding: 0.8rem;
+      background: white;
+      color: var(--color-gold);
+      border: 2px solid var(--color-gold);
+      border-radius: 4px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+
+    .continue-shopping:hover {
+      background: var(--color-gold);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <h1 style="margin-bottom: 2rem;"><%= lang === 'ar' ? 'سلة التسوق' : 'Shopping Cart' %></h1>
+
+        <div class="cart-container">
+          <div class="cart-items" id="cart-items">
+            <div class="cart-empty">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"/>
+                <circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+              <h2><%= lang === 'ar' ? 'سلتك فارغة' : 'Your cart is empty' %></h2>
+              <p><%= lang === 'ar' ? 'ابدأ التسوق الآن' : 'Start shopping now' %></p>
+              <a href="/shop<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-primary" style="margin-top: 1rem;">
+                <%= lang === 'ar' ? 'تصفح المنتجات' : 'Browse Products' %>
+              </a>
+            </div>
+          </div>
+
+          <div class="cart-summary">
+            <h2 style="margin-bottom: 1.5rem;"><%= lang === 'ar' ? 'ملخص الطلب' : 'Order Summary' %></h2>
+            <div class="summary-row">
+              <span><%= lang === 'ar' ? 'المجموع الجزئي:' : 'Subtotal:' %></span>
+              <span id="subtotal">0</span>
+            </div>
+            <div class="summary-row">
+              <span><%= lang === 'ar' ? 'الشحن:' : 'Shipping:' %></span>
+              <span><%= lang === 'ar' ? 'مجاني' : 'Free' %></span>
+            </div>
+            <div class="summary-row total">
+              <span><%= lang === 'ar' ? 'الإجمالي:' : 'Total:' %></span>
+              <span id="total">0</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn" disabled>
+              <%= lang === 'ar' ? 'متابعة الدفع' : 'Proceed to Checkout' %>
+            </button>
+            <a href="/shop<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="continue-shopping">
+              <%= lang === 'ar' ? 'متابعة التسوق' : 'Continue Shopping' %>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script src="/js/main.js"></script>
+  <script>
+    const lang = '<%= lang %>';
+    const cartItems = document.getElementById('cart-items');
+    const checkoutBtn = document.getElementById('checkout-btn');
+    const subtotalEl = document.getElementById('subtotal');
+    const totalEl = document.getElementById('total');
+
+    // Format currency
+    function formatCurrency(price) {
+      if (lang === 'ar') {
+        return 'د.إ' + price.toLocaleString('ar-AE');
+      }
+      return 'AED ' + price.toLocaleString('en-AE');
+    }
+
+    // Render cart
+    async function renderCart() {
+      const cart = getCart();
+      const productIds = Object.keys(cart);
+
+      if (productIds.length === 0) {
+        cartItems.innerHTML = `
+          <div class="cart-empty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"/>
+              <circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            <h2>${lang === 'ar' ? 'سلتك فارغة' : 'Your cart is empty'}</h2>
+            <p>${lang === 'ar' ? 'ابدأ التسوق الآن' : 'Start shopping now'}</p>
+            <a href="/shop?lang=${lang}" class="btn btn-primary" style="margin-top: 1rem;">
+              ${lang === 'ar' ? 'تصفح المنتجات' : 'Browse Products'}
+            </a>
+          </div>
+        `;
+        checkoutBtn.disabled = true;
+        subtotalEl.textContent = formatCurrency(0);
+        totalEl.textContent = formatCurrency(0);
+        return;
+      }
+
+      try {
+        const productsRes = await fetch('/api/products');
+        const allProducts = await productsRes.json();
+
+        let html = '';
+        let subtotal = 0;
+
+        for (const productId of productIds) {
+          const product = allProducts.find(p => p.id === productId);
+          if (!product) continue;
+
+          const quantity = cart[productId];
+          const itemTotal = product.price * quantity;
+          subtotal += itemTotal;
+
+          html += `
+            <div class="cart-item">
+              <img src="${product.image}" alt="${product.name.en}" class="cart-item-image">
+              <div class="cart-item-details">
+                <h3>${lang === 'ar' ? product.name.ar : product.name.en}</h3>
+                <div class="category">${lang === 'ar' ? product.category : product.category}</div>
+                <div class="price">${formatCurrency(product.price)}</div>
+                <div class="quantity-controls">
+                  <button onclick="decrementQuantity('${productId}')">−</button>
+                  <input type="number" value="${quantity}" min="1" id="qty-${productId}" onchange="updateQuantity('${productId}', this.value)">
+                  <button onclick="incrementQuantity('${productId}')">+</button>
+                </div>
+                <button class="remove-btn" onclick="removeItem('${productId}')">
+                  ${lang === 'ar' ? 'إزالة' : 'Remove'}
+                </button>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 1rem; font-weight: 600;">
+                  ${formatCurrency(itemTotal)}
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        cartItems.innerHTML = html;
+        subtotalEl.textContent = formatCurrency(subtotal);
+        totalEl.textContent = formatCurrency(subtotal);
+        checkoutBtn.disabled = false;
+      } catch (error) {
+        console.error('Error rendering cart:', error);
+      }
+    }
+
+    function incrementQuantity(productId) {
+      const qty = parseInt(document.getElementById('qty-' + productId).value) + 1;
+      updateQuantity(productId, qty);
+    }
+
+    function decrementQuantity(productId) {
+      const qty = parseInt(document.getElementById('qty-' + productId).value) - 1;
+      if (qty > 0) {
+        updateQuantity(productId, qty);
+      }
+    }
+
+    function updateQuantity(productId, quantity) {
+      quantity = parseInt(quantity);
+      if (quantity > 0) {
+        updateCartQuantity(productId, quantity);
+        renderCart();
+      }
+    }
+
+    function removeItem(productId) {
+      removeFromCart(productId);
+      renderCart();
+    }
+
+    // Checkout
+    checkoutBtn.addEventListener('click', function() {
+      const cart = getCart();
+      const message = encodeURIComponent(
+        lang === 'ar'
+          ? `مرحباً، أود الطلب الآن\n\nالكمية الإجمالية: ${Object.values(cart).reduce((a, b) => a + b, 0)} منتج`
+          : `Hi, I would like to place an order now\n\nTotal items: ${Object.values(cart).reduce((a, b) => a + b, 0)} products`
+      );
+      window.open(`https://wa.me/971557129912?text=${message}`, '_blank');
+    });
+
+    // Initial render
+    renderCart();
+  </script>
+</body>
+</html>

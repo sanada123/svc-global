@@ -411,6 +411,93 @@ function announceToScreenReader(message) {
 }
 
 // ============================================
+// Cart Page Functionality
+// ============================================
+async function renderCartPage() {
+  const cartContainer = document.getElementById('cart-items');
+  if (!cartContainer) return; // Not on cart page
+
+  const cart = getCart();
+  const productIds = Object.keys(cart);
+
+  if (productIds.length === 0) return; // Empty cart handled in template
+
+  try {
+    const response = await fetch('/api/products');
+    const products = await response.json();
+
+    let html = '';
+    let subtotal = 0;
+    const lang = getCurrentLanguage();
+
+    for (const productId of productIds) {
+      const product = products.find(p => p.id === productId);
+      if (!product) continue;
+
+      const quantity = cart[productId];
+      const itemTotal = product.price * quantity;
+      subtotal += itemTotal;
+
+      html += `
+        <div class="cart-item">
+          <img src="${product.image}" alt="${product.name.en}" class="cart-item-image">
+          <div class="cart-item-details">
+            <h3>${lang === 'ar' ? product.name.ar : product.name.en}</h3>
+            <div class="category">${product.category}</div>
+            <div class="price">${formatPrice(product.price, lang)}</div>
+            <div class="quantity-controls">
+              <button onclick="decrementQuantity('${productId}')">−</button>
+              <input type="number" value="${quantity}" min="1" id="qty-${productId}" onchange="updateQuantity('${productId}', this.value)">
+              <button onclick="incrementQuantity('${productId}')">+</button>
+            </div>
+            <button class="remove-btn" onclick="removeItem('${productId}')">
+              ${lang === 'ar' ? 'إزالة' : 'Remove'}
+            </button>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 1rem; font-weight: 600;">
+              ${formatPrice(itemTotal, lang)}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    cartContainer.innerHTML = html;
+    document.getElementById('subtotal').textContent = formatPrice(subtotal, lang);
+    document.getElementById('total').textContent = formatPrice(subtotal, lang);
+    document.getElementById('checkout-btn').disabled = false;
+  } catch (error) {
+    console.error('Error rendering cart:', error);
+  }
+}
+
+function incrementQuantity(productId) {
+  const qty = parseInt(document.getElementById('qty-' + productId).value) + 1;
+  updateQuantity(productId, qty);
+}
+
+function decrementQuantity(productId) {
+  const qty = parseInt(document.getElementById('qty-' + productId).value) - 1;
+  if (qty > 0) {
+    updateQuantity(productId, qty);
+  }
+}
+
+function updateQuantity(productId, quantity) {
+  quantity = parseInt(quantity);
+  if (quantity > 0) {
+    updateCartQuantity(productId, quantity);
+    renderCartPage();
+  }
+}
+
+function removeItem(productId) {
+  removeFromCart(productId);
+  renderCartPage();
+}
+
+// ============================================
 // Export Functions for Global Use
 // ============================================
 window.SVC = {
@@ -421,5 +508,10 @@ window.SVC = {
   getCurrentLanguage,
   formatPrice,
   shareProduct,
-  printDocument
+  printDocument,
+  renderCartPage,
+  incrementQuantity,
+  decrementQuantity,
+  updateQuantity,
+  removeItem
 };

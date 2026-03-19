@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'ar' ? 'حسابي - SVC Global' : 'My Account - SVC Global' %>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .account-container {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .account-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .account-sidebar {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      height: fit-content;
+    }
+
+    .account-sidebar h3 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .sidebar-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar-menu li {
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar-menu a {
+      display: block;
+      padding: 0.75rem;
+      color: #333;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+
+    .sidebar-menu a:hover {
+      background: #f5f5f5;
+      color: var(--color-gold);
+    }
+
+    .sidebar-menu a.active {
+      background: var(--color-gold);
+      color: white;
+    }
+
+    .logout-btn {
+      width: 100%;
+      margin-top: 2rem;
+      padding: 0.75rem;
+      background: #f44336;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .logout-btn:hover {
+      background: #d32f2f;
+    }
+
+    .account-content {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .welcome-section {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid #eee;
+    }
+
+    .welcome-section h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    .welcome-section p {
+      color: #666;
+    }
+
+    .info-section {
+      margin-bottom: 2rem;
+    }
+
+    .info-section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-gold);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .info-item {
+      padding: 1rem;
+      background: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    .info-item label {
+      display: block;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .info-item p {
+      margin: 0;
+      color: #666;
+    }
+
+    .empty-orders {
+      text-align: center;
+      padding: 2rem;
+      background: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    .empty-orders svg {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    .empty-orders p {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .empty-orders a {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="container">
+        <h1 style="margin-bottom: 2rem;"><%= lang === 'ar' ? 'حسابي' : 'My Account' %></h1>
+
+        <div class="account-container">
+          <aside class="account-sidebar">
+            <h3><%= lang === 'ar' ? 'القائمة' : 'Menu' %></h3>
+            <ul class="sidebar-menu">
+              <li><a href="#profile" class="active"><%= lang === 'ar' ? 'معلومات الحساب' : 'Account Info' %></a></li>
+              <li><a href="#orders"><%= lang === 'ar' ? 'طلباتي' : 'My Orders' %></a></li>
+              <li><a href="#settings"><%= lang === 'ar' ? 'الإعدادات' : 'Settings' %></a></li>
+            </ul>
+            <button class="logout-btn" id="logout-btn">
+              <%= lang === 'ar' ? 'تسجيل الخروج' : 'Logout' %>
+            </button>
+          </aside>
+
+          <div class="account-content">
+            <div class="welcome-section">
+              <h1><%= lang === 'ar' ? 'مرحباً بك، ' : 'Welcome, ' %><%= user.fullName %></h1>
+              <p><%= lang === 'ar' ? 'نحن سعداء برؤيتك. إدارة حسابك وطلباتك من هنا.' : 'We\'re happy to see you. Manage your account and orders here.' %></p>
+            </div>
+
+            <!-- Account Info Section -->
+            <div class="info-section" id="profile">
+              <h2><%= lang === 'ar' ? 'معلومات الحساب' : 'Account Information' %></h2>
+              <div class="info-grid">
+                <div class="info-item">
+                  <label><%= lang === 'ar' ? 'الاسم' : 'Full Name' %></label>
+                  <p><%= user.fullName %></p>
+                </div>
+                <div class="info-item">
+                  <label><%= lang === 'ar' ? 'البريد الإلكتروني' : 'Email' %></label>
+                  <p><%= user.email %></p>
+                </div>
+                <% if (user.phone) { %>
+                  <div class="info-item">
+                    <label><%= lang === 'ar' ? 'رقم الهاتف' : 'Phone' %></label>
+                    <p><%= user.phone %></p>
+                  </div>
+                <% } %>
+              </div>
+            </div>
+
+            <!-- Orders Section -->
+            <div class="info-section" id="orders">
+              <h2><%= lang === 'ar' ? 'طلباتي' : 'My Orders' %></h2>
+              <div class="empty-orders">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 12l2 2 4-4M7 19H5a2 2 0 01-2-2V7a2 2 0 012-2h4a2 2 0 012 2v10a2 2 0 01-2 2zm6 0h4a2 2 0 002-2V7a2 2 0 00-2-2h-4a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <p><%= lang === 'ar' ? 'لا توجد طلبات حتى الآن' : 'No orders yet' %></p>
+                <a href="/shop<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-primary">
+                  <%= lang === 'ar' ? 'ابدأ التسوق' : 'Start Shopping' %>
+                </a>
+              </div>
+            </div>
+
+            <!-- Settings Section -->
+            <div class="info-section" id="settings">
+              <h2><%= lang === 'ar' ? 'الإعدادات' : 'Settings' %></h2>
+              <p><%= lang === 'ar' ? 'يمكنك تحديث معلومات حسابك أو تغيير كلمة المرور من خلال التواصل معنا.' : 'You can update your account information or change your password by contacting us.' %></p>
+              <a href="/contact<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-secondary" style="margin-top: 1rem;">
+                <%= lang === 'ar' ? 'اتصل بنا' : 'Contact Us' %>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script src="/js/main.js"></script>
+  <script>
+    const lang = '<%= lang %>';
+
+    // Sidebar menu navigation
+    document.querySelectorAll('.sidebar-menu a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelectorAll('.sidebar-menu a').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        const target = this.getAttribute('href');
+        document.querySelectorAll('.info-section').forEach(section => {
+          section.style.display = 'none';
+        });
+        if (target === '#profile') {
+          document.getElementById('profile').style.display = 'block';
+        } else if (target === '#orders') {
+          document.getElementById('orders').style.display = 'block';
+        } else if (target === '#settings') {
+          document.getElementById('settings').style.display = 'block';
+        }
+      });
+    });
+
+    // Logout button
+    document.getElementById('logout-btn').addEventListener('click', async function() {
+      try {
+        const response = await fetch('/api/auth/logout?lang=' + lang, {
+          method: 'POST'
+        });
+
+        const data = await response.json();
+        if (data.success) {
+          window.location.href = data.redirect;
+        }
+      } catch (error) {
+        console.error('Logout error:', error);
+      }
+    });
+  </script>
+</body>
+</html>

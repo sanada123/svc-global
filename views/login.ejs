@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>" dir="<%= dir %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= lang === 'ar' ? 'تسجيل الدخول - SVC Global' : 'Login - SVC Global' %>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .auth-container {
+      max-width: 450px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    .auth-container h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--color-gold);
+      box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+    }
+
+    .form-group input::placeholder {
+      color: #999;
+    }
+
+    .forgot-password {
+      text-align: right;
+      margin-bottom: 1.5rem;
+    }
+
+    .forgot-password a {
+      color: var(--color-gold);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--color-gold);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background: #b8860b;
+    }
+
+    .auth-link {
+      text-align: center;
+      margin-top: 1.5rem;
+      color: #666;
+    }
+
+    .auth-link a {
+      color: var(--color-gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .auth-link a:hover {
+      text-decoration: underline;
+    }
+
+    .error-message {
+      background: #ffebee;
+      color: #c62828;
+      padding: 1rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      display: none;
+    }
+
+    .error-message.show {
+      display: block;
+    }
+
+    .loading {
+      display: none;
+      text-align: center;
+      color: var(--color-gold);
+    }
+  </style>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <main id="main-content">
+    <section class="section">
+      <div class="auth-container">
+        <h1><%= lang === 'ar' ? 'تسجيل الدخول' : 'Login' %></h1>
+
+        <div class="error-message" id="error-message"></div>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label for="email"><%= lang === 'ar' ? 'البريد الإلكتروني' : 'Email' %></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="<%= lang === 'ar' ? 'example@email.com' : 'example@email.com' %>"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="password"><%= lang === 'ar' ? 'كلمة المرور' : 'Password' %></label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="<%= lang === 'ar' ? 'أدخل كلمة المرور' : 'Enter your password' %>"
+            >
+          </div>
+
+          <div class="forgot-password">
+            <a href="#"><%= lang === 'ar' ? 'هل نسيت كلمة المرور؟' : 'Forgot password?' %></a>
+          </div>
+
+          <button type="submit" class="login-btn">
+            <%= lang === 'ar' ? 'دخول' : 'Login' %>
+          </button>
+
+          <div class="loading" id="loading">
+            <%= lang === 'ar' ? 'جاري المعالجة...' : 'Loading...' %>
+          </div>
+        </form>
+
+        <div class="auth-link">
+          <%= lang === 'ar' ? 'ليس لديك حساب؟' : 'Don\'t have an account?' %>
+          <a href="/register<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>">
+            <%= lang === 'ar' ? 'أنشئ واحداً الآن' : 'Create one now' %>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script src="/js/main.js"></script>
+  <script>
+    const lang = '<%= lang %>';
+    const form = document.getElementById('login-form');
+    const errorDiv = document.getElementById('error-message');
+    const loadingDiv = document.getElementById('loading');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      errorDiv.classList.remove('show');
+      loadingDiv.style.display = 'block';
+
+      try {
+        const response = await fetch('/api/auth/login?lang=' + lang, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          errorDiv.textContent = data.message;
+          errorDiv.classList.add('show');
+          loadingDiv.style.display = 'none';
+          return;
+        }
+
+        window.location.href = data.redirect;
+      } catch (error) {
+        errorDiv.textContent = lang === 'ar' ? 'حدث خطأ. حاول مرة أخرى' : 'An error occurred. Please try again.';
+        errorDiv.classList.add('show');
+        loadingDiv.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
