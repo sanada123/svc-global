@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVC Global - Brand Guidelines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
+      line-height: 1.8;
+      color: #2a2a2a;
+      background-color: #faf8f5;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #d4af37;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    section {
+      margin-bottom: 5rem;
+      background: white;
+      padding: 3rem;
+      border-radius: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #0a0a0a;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid #d4af37;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #0a0a0a;
+      margin: 1.5rem 0 1rem 0;
+      letter-spacing: -0.005em;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.9;
+    }
+
+    .logo-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-variant {
+      padding: 2rem;
+      text-align: center;
+      border-radius: 0;
+    }
+
+    .logo-variant.dark {
+      background: #0a0a0a;
+    }
+
+    .logo-variant.light {
+      background: #f5f3f0;
+      border: 1px solid #e0dcd6;
+    }
+
+    .logo-variant svg {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .logo-variant p {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .logo-variant .min-size {
+      font-size: 0.85rem;
+      color: #999;
+      font-style: italic;
+    }
+
+    .color-palette {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .color-swatch {
+      text-align: center;
+    }
+
+    .color-swatch-box {
+      width: 100%;
+      height: 150px;
+      border-radius: 0;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .color-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0a0a0a;
+    }
+
+    .color-code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+      color: #d4af37;
+      margin-top: 0.5rem;
+    }
+
+    .typography-example {
+      margin: 2rem 0;
+      padding: 2rem;
+      background: #f5f3f0;
+      border-left: 4px solid #d4af37;
+    }
+
+    .typography-example h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #0a0a0a;
+      margin-bottom: 0.5rem;
+    }
+
+    .typography-example.body {
+      font-size: 1rem;
+      color: #2a2a2a;
+      line-height: 1.8;
+    }
+
+    .guidelines-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .guideline-card {
+      padding: 2rem;
+      border-radius: 0;
+      border: 1px solid #e0dcd6;
+    }
+
+    .guideline-card.do {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+    }
+
+    .guideline-card.dont {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+    }
+
+    .guideline-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .guideline-card.do h4 {
+      color: #22c55e;
+    }
+
+    .guideline-card.dont h4 {
+      color: #ef4444;
+    }
+
+    .guideline-card ul {
+      list-style-position: inside;
+      margin-left: 0;
+    }
+
+    .guideline-card li {
+      margin-bottom: 0.75rem;
+    }
+
+    .brand-voice-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+    }
+
+    .brand-voice-table th,
+    .brand-voice-table td {
+      padding: 1.25rem;
+      text-align: left;
+      border-bottom: 1px solid #e0dcd6;
+    }
+
+    .brand-voice-table th {
+      background: #f5f3f0;
+      font-weight: 700;
+      color: #0a0a0a;
+    }
+
+    .brand-voice-table tr:hover {
+      background: #f5f3f0;
+    }
+
+    .brand-voice-table .pillar {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: #d4af37;
+      font-weight: 700;
+    }
+
+    footer {
+      background: #0a0a0a;
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+      margin-top: 5rem;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      main {
+        padding: 2rem 1rem;
+      }
+
+      section {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SVC Global</h1>
+    <p>BRAND GUIDELINES & IDENTITY STANDARDS</p>
+  </header>
+
+  <main>
+    <!-- Logo Section -->
+    <section>
+      <h2>Logo Usage</h2>
+
+      <h3>Primary Logo</h3>
+      <p>The SVC Global logo should be used as the primary brand mark across all applications. It features the letterform "SVC" with the word "GLOBAL" positioned below, accompanied by a subtle diamond accent element in gold.</p>
+
+      <div class="logo-showcase">
+        <div class="logo-variant light">
+          <h4 style="font-size: 1.2rem; margin-bottom: 1rem; color: #0a0a0a;">Light Background</h4>
+          <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="max-width: 200px; margin: 0 auto; display: block;">
+            <rect width="400" height="200" fill="#ffffff"/>
+            <defs>
+              <style>
+                .svc-text { font-family: Georgia, 'Times New Roman', serif; font-weight: bold; font-size: 72px; fill: #0a0a0a; letter-spacing: 2px; }
+                .global-text { font-family: Georgia, 'Times New Roman', serif; font-weight: 300; font-size: 13px; fill: #0a0a0a; letter-spacing: 6px; }
+              </style>
+            </defs>
+            <text x="200" y="95" text-anchor="middle" class="svc-text">SVC</text>
+            <g transform="translate(200, 105)">
+              <polygon points="0,-14 14,0 0,14 -14,0" fill="none" stroke="#d4af37" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+              <circle cx="0" cy="0" r="3.5" fill="#d4af37"/>
+              <line x1="-8" y1="0" x2="8" y2="0" stroke="#d4af37" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+              <line x1="0" y1="-8" x2="0" y2="8" stroke="#d4af37" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+            </g>
+            <text x="200" y="165" text-anchor="middle" class="global-text">G L O B A L</text>
+          </svg>
+          <p><strong>Standard Logo</strong></p>
+          <p class="min-size">Minimum size: 160px width</p>
+        </div>
+
+        <div class="logo-variant dark">
+          <h4 style="font-size: 1.2rem; margin-bottom: 1rem; color: white;">Dark Background</h4>
+          <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="max-width: 200px; margin: 0 auto; display: block;">
+            <defs>
+              <style>
+                .svc-text { font-family: Georgia, 'Times New Roman', serif; font-weight: bold; font-size: 72px; fill: #ffffff; letter-spacing: 2px; }
+                .global-text { font-family: Georgia, 'Times New Roman', serif; font-weight: 300; font-size: 13px; fill: #ffffff; letter-spacing: 6px; }
+              </style>
+            </defs>
+            <text x="200" y="95" text-anchor="middle" class="svc-text">SVC</text>
+            <g transform="translate(200, 105)">
+              <polygon points="0,-14 14,0 0,14 -14,0" fill="none" stroke="#d4af37" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+              <circle cx="0" cy="0" r="3.5" fill="#d4af37"/>
+              <line x1="-8" y1="0" x2="8" y2="0" stroke="#d4af37" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+              <line x1="0" y1="-8" x2="0" y2="8" stroke="#d4af37" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+            </g>
+            <text x="200" y="165" text-anchor="middle" class="global-text">G L O B A L</text>
+          </svg>
+          <p style="color: white;"><strong>White Variant</strong></p>
+          <p class="min-size" style="color: rgba(255,255,255,0.7);">For dark backgrounds</p>
+        </div>
+      </div>
+
+      <h3>Logo Spacing & Clearance</h3>
+      <p>Maintain clear space around the logo equal to the height of the letter "S" in "SVC". This ensures the logo maintains its presence and legibility in all contexts.</p>
+
+      <h3>Minimum Size</h3>
+      <p>The primary logo should never be reproduced smaller than 160px in width. At smaller dimensions, use the symbol-only version (diamond icon).</p>
+
+      <div class="guidelines-grid">
+        <div class="guideline-card do">
+          <h4>✓ DO</h4>
+          <ul>
+            <li>Use approved color combinations</li>
+            <li>Maintain consistent proportions</li>
+            <li>Keep adequate whitespace</li>
+            <li>Use high-resolution files</li>
+            <li>Center logo on dark backgrounds</li>
+          </ul>
+        </div>
+
+        <div class="guideline-card dont">
+          <h4>✗ DON'T</h4>
+          <ul>
+            <li>Stretch or distort the logo</li>
+            <li>Add shadows or effects</li>
+            <li>Change colors without approval</li>
+            <li>Rotate or angle the logo</li>
+            <li>Place on insufficient contrast</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section>
+      <h2>Color Palette</h2>
+      <p>The SVC Global color palette is carefully curated to reflect luxury, sophistication, and exclusivity. Each color serves a specific purpose in the brand identity.</p>
+
+      <div class="color-palette">
+        <div class="color-swatch">
+          <div class="color-swatch-box" style="background-color: #0a0a0a;"></div>
+          <div class="color-name">Primary Black</div>
+          <div class="color-code">#0a0a0a</div>
+          <p style="font-size: 0.9rem; margin-top: 0.75rem; color: #666;">Primary brand color for text and dominant elements</p>
+        </div>
+
+        <div class="color-swatch">
+          <div class="color-swatch-box" style="background-color: #d4af37;"></div>
+          <div class="color-name">Gold Accent</div>
+          <div class="color-code">#d4af37</div>
+          <p style="font-size: 0.9rem; margin-top: 0.75rem; color: #666;">Luxury accent for highlights and CTAs</p>
+        </div>
+
+        <div class="color-swatch">
+          <div class="color-swatch-box" style="background-color: #faf8f5;"></div>
+          <div class="color-name">Cream</div>
+          <div class="color-code">#faf8f5</div>
+          <p style="font-size: 0.9rem; margin-top: 0.75rem; color: #666;">Warm background for premium feel</p>
+        </div>
+
+        <div class="color-swatch">
+          <div class="color-swatch-box" style="background-color: #1a1a1a;"></div>
+          <div class="color-name">Charcoal</div>
+          <div class="color-code">#1a1a1a</div>
+          <p style="font-size: 0.9rem; margin-top: 0.75rem; color: #666;">Secondary dark for depth and contrast</p>
+        </div>
+
+        <div class="color-swatch">
+          <div class="color-swatch-box" style="background-color: #ffffff; border: 2px solid #ddd;"></div>
+          <div class="color-name">White</div>
+          <div class="color-code">#ffffff</div>
+          <p style="font-size: 0.9rem; margin-top: 0.75rem; color: #666;">Pure white for contrast and clarity</p>
+        </div>
+
+        <div class="color-swatch">
+          <div class="color-swatch-box" style="background-color: #e8c547;"></div>
+          <div class="color-name">Gold Light</div>
+          <div class="color-code">#e8c547</div>
+          <p style="font-size: 0.9rem; margin-top: 0.75rem; color: #666;">Lighter gold for hover states</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section>
+      <h2>Typography</h2>
+      <p>Typography is a cornerstone of the SVC Global brand identity. Our font choices reflect sophistication and luxury while maintaining readability across all mediums.</p>
+
+      <h3>Heading Font: Playfair Display</h3>
+      <p style="margin-bottom: 1rem;">Used for all headings, titles, and prominent text elements. Playfair Display conveys elegance and high-end positioning.</p>
+
+      <div class="typography-example">
+        <h4>The Art of Luxury</h4>
+        <p style="font-size: 0.95rem; color: #666; margin: 0;">Weight: 400, 700, 900 | Character set: Latin only</p>
+      </div>
+
+      <h3>Body Font: Tajawal</h3>
+      <p style="margin-bottom: 1rem;">Used for body text, navigation, and UI elements. Tajawal provides excellent readability in both English and Arabic.</p>
+
+      <div class="typography-example body">
+        <p>Discover an exclusive collection of the world's finest luxury products. From handcrafted furniture to premium accessories, every piece is selected for its exceptional quality and timeless design.</p>
+        <p style="font-size: 0.9rem; color: #999; margin-top: 1rem;">Regular (400) | Size: 14-16px on screens, 10-12px print</p>
+      </div>
+
+      <h3>Size Hierarchy</h3>
+      <table class="brand-voice-table">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Font</th>
+            <th>Size</th>
+            <th>Weight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hero Heading</td>
+            <td>Playfair Display</td>
+            <td>6.5rem (desktop), 2.25rem (mobile)</td>
+            <td>900</td>
+          </tr>
+          <tr>
+            <td>Page Title (H1)</td>
+            <td>Playfair Display</td>
+            <td>5rem</td>
+            <td>900</td>
+          </tr>
+          <tr>
+            <td>Section Title (H2)</td>
+            <td>Playfair Display</td>
+            <td>3.5rem</td>
+            <td>700</td>
+          </tr>
+          <tr>
+            <td>Subsection (H3)</td>
+            <td>Playfair Display</td>
+            <td>2rem</td>
+            <td>700</td>
+          </tr>
+          <tr>
+            <td>Body Text</td>
+            <td>Tajawal</td>
+            <td>1rem (16px)</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td>Small Text</td>
+            <td>Tajawal</td>
+            <td>0.875rem (14px)</td>
+            <td>400</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Brand Voice -->
+    <section>
+      <h2>Brand Voice & Personality</h2>
+      <p>The SVC Global brand speaks with a voice that is exclusive, refined, and deeply rooted in craftsmanship and heritage.</p>
+
+      <table class="brand-voice-table">
+        <thead>
+          <tr>
+            <th>Brand Pillar</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pillar">Luxury</td>
+            <td>Premium quality, exclusivity, and refined taste define everything we do. We cater to discerning customers who appreciate the finer things.</td>
+            <td>"Exquisite craftsmanship meets timeless design"</td>
+          </tr>
+          <tr>
+            <td class="pillar">Exclusivity</td>
+            <td>Limited editions, curated collections, and access to items unavailable elsewhere. SVC Global offers what others cannot.</td>
+            <td>"Members-only access to our most coveted pieces"</td>
+          </tr>
+          <tr>
+            <td class="pillar">Craftsmanship</td>
+            <td>Attention to detail, master artisans, and time-honored techniques. Every product tells a story of excellence.</td>
+            <td>"Handcrafted by master artisans in Europe"</td>
+          </tr>
+          <tr>
+            <td class="pillar">Heritage</td>
+            <td>Deep-rooted tradition, legacy brands, and timeless appeal. We connect customers with pieces that endure.</td>
+            <td>"Three generations of Italian furniture mastery"</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Tone Guidelines</h3>
+      <ul>
+        <li><strong>Sophisticated:</strong> Use refined language that reflects the luxury positioning</li>
+        <li><strong>Knowledgeable:</strong> Share expertise about products and craftsmanship</li>
+        <li><strong>Welcoming:</strong> Make exclusivity feel accessible, not arrogant</li>
+        <li><strong>Authentic:</strong> Tell genuine stories about products and artisans</li>
+        <li><strong>Respectful:</strong> Honor both English and Arabic speaking audiences equally</li>
+      </ul>
+    </section>
+
+    <!-- Applications -->
+    <section>
+      <h2>Brand Applications</h2>
+      <p>The SVC Global brand identity should remain consistent across all touchpoints while adapting appropriately to different mediums.</p>
+
+      <h3>Digital Applications</h3>
+      <ul>
+        <li><strong>Website:</strong> Logo in header, consistent typography, gold accents on CTAs</li>
+        <li><strong>Email:</strong> Branded header with logo, footer with social links</li>
+        <li><strong>Social Media:</strong> Square logo variant, brand color palette, consistent filter treatment</li>
+        <li><strong>Product Images:</strong> Clean backgrounds (cream or white), lifestyle context, consistent lighting</li>
+      </ul>
+
+      <h3>Print Applications</h3>
+      <ul>
+        <li><strong>Business Cards:</strong> Logo left side, gold accent line, embossed finish</li>
+        <li><strong>Letterhead:</strong> Logo top left, subtle watermark background</li>
+        <li><strong>Brochures:</strong> Cover design emphasizes hero image with gold typography overlay</li>
+        <li><strong>Packaging:</strong> Minimal design, centered logo, luxury materials</li>
+      </ul>
+
+      <h3>Spacing & Layout</h3>
+      <ul>
+        <li>Minimum 2rem padding around key content</li>
+        <li>Maximum line length: 65-75 characters for body text</li>
+        <li>Generous whitespace creates premium feel</li>
+        <li>Grid-based layouts with 12-column structure</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2>Brand Compliance</h2>
+      <p>For questions about brand usage, asset requests, or to request exceptions to these guidelines, please contact the SVC Global marketing team.</p>
+
+      <p style="margin-top: 2rem; padding: 1.5rem; background: #f5f3f0; border-left: 4px solid #d4af37;">
+        <strong>Brand Manager:</strong> marketing@svcglobal.com<br>
+        <strong>Last Updated:</strong> March 2026<br>
+        <strong>Version:</strong> 1.0
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 SVC Global FZ-LLC. All rights reserved.</p>
+    <p>Dubai, United Arab Emirates | <a href="https://svcglobal.com">svcglobal.com</a></p>
+  </footer>
+</body>
+</html>

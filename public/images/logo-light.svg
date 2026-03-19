@@ -1,0 +1,27 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background (implied, not included) -->
+
+  <defs>
+    <style>
+      .svc-text { font-family: Georgia, 'Times New Roman', serif; font-weight: bold; font-size: 72px; fill: #ffffff; letter-spacing: 2px; }
+      .global-text { font-family: Georgia, 'Times New Roman', serif; font-weight: 300; font-size: 13px; fill: #ffffff; letter-spacing: 6px; }
+    </style>
+  </defs>
+
+  <!-- SVC Text - White -->
+  <text x="200" y="95" text-anchor="middle" class="svc-text">SVC</text>
+
+  <!-- Elegant Diamond Accent - Gold -->
+  <g transform="translate(200, 105)">
+    <!-- Outer diamond outline -->
+    <polygon points="0,-14 14,0 0,14 -14,0" fill="none" stroke="#d4af37" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+    <!-- Inner center point -->
+    <circle cx="0" cy="0" r="3.5" fill="#d4af37"/>
+    <!-- Subtle inner cross -->
+    <line x1="-8" y1="0" x2="8" y2="0" stroke="#d4af37" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+    <line x1="0" y1="-8" x2="0" y2="8" stroke="#d4af37" stroke-width="0.8" opacity="0.6" vector-effect="non-scaling-stroke"/>
+  </g>
+
+  <!-- GLOBAL Text - widely spaced, White -->
+  <text x="200" y="165" text-anchor="middle" class="global-text">G L O B A L</text>
+</svg>

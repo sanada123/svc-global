@@ -1932,3 +1932,30 @@ footer {
     font-size: 1.4rem;
   }
 }
+
+/* Hero Banner Enhancement */
+.hero-banner-grid {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  z-index: 0;
+  opacity: 0.15;
+}
+.hero-banner-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 10, 0.4);
+  z-index: 1;
+  pointer-events: none;
+}

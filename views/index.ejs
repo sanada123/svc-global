@@ -14,13 +14,21 @@
   <%- include('partials/header') %>
 
   <!-- Hero Section -->
-  <section class="hero" style="background-image: url('https://svcglobale.com/wp-content/uploads/2025/11/symphony-oval-bathtub.jpg');">
+  <section class="hero">
+    <div class="hero-banner-grid">
+      <img src="https://svcglobale.com/wp-content/uploads/2025/11/symphony-oval-bathtub.jpg" alt="" aria-hidden="true" loading="eager">
+      <img src="https://svcglobale.com/wp-content/uploads/2025/11/1763122339.png" alt="" aria-hidden="true" loading="eager">
+      <img src="https://svcglobale.com/wp-content/uploads/2025/11/1763122444.png" alt="" aria-hidden="true" loading="eager">
+    </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
+      <img src="/images/logo-light.svg" alt="" aria-hidden="true" class="hero-logo" style="height: 60px; margin-bottom: 2rem; opacity: 0.8;">
       <h1><%= lang === 'ar' ? 'فن الفخامة' : 'The Art of Luxury' %></h1>
       <p><%= lang === 'ar' ? 'اكتشف مجموعة حصرية من أفضل المنتجات الفاخرة في العالم' : 'Discover an exclusive collection of the world\'s finest luxury products' %></p>
-      <a href="/shop<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-primary"><%= lang === 'ar' ? 'تسوق الآن' : 'Shop Now' %></a>
-      <a href="#main-content" class="btn btn-outline"><%= lang === 'ar' ? 'اكتشف المزيد' : 'Explore More' %></a>
+      <div style="margin-top: 1rem;">
+        <a href="/shop<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-secondary"><%= lang === 'ar' ? 'تسوق الآن' : 'Shop Now' %></a>
+        <a href="#main-content" class="btn btn-outline" style="color: white; border-color: rgba(255,255,255,0.4);"><%= lang === 'ar' ? 'اكتشف المزيد' : 'Explore More' %></a>
+      </div>
     </div>
   </section>
 

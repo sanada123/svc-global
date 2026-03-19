@@ -2,7 +2,9 @@
   <a href="#main-content" class="skip-to-main">Skip to main content</a>
 
   <div class="header-main">
-    <a href="<%= lang === 'ar' ? '/?lang=ar' : '/?lang=en' %>" class="logo">SVC GLOBAL</a>
+    <a href="<%= lang === 'ar' ? '/?lang=ar' : '/?lang=en' %>" class="logo">
+      <img src="/images/logo.svg" alt="SVC Global" class="logo-img" width="160" height="50">
+    </a>
 
     <nav class="nav">
       <a href="<%= lang === 'ar' ? '/?lang=ar' : '/?lang=en' %>"><%= lang === 'ar' ? 'الرئيسية' : 'Home' %></a>
@@ -114,6 +116,18 @@
 
   #mobile-menu {
     z-index: 200;
+  }
+
+  .logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+
+  @media (max-width: 480px) {
+    .logo-img {
+      height: 28px;
+    }
   }
 
   .sr-only {
