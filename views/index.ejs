@@ -14,18 +14,13 @@
   <%- include('partials/header') %>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-banner-grid">
-      <img src="https://svcglobale.com/wp-content/uploads/2025/11/symphony-oval-bathtub.jpg" alt="" aria-hidden="true" loading="eager">
-      <img src="https://svcglobale.com/wp-content/uploads/2025/11/1763122339.png" alt="" aria-hidden="true" loading="eager">
-      <img src="https://svcglobale.com/wp-content/uploads/2025/11/1763122444.png" alt="" aria-hidden="true" loading="eager">
-    </div>
+  <section class="hero" style="background-image: url('https://svcglobale.com/wp-content/uploads/2025/11/symphony-oval-bathtub.jpg'); background-size: cover; background-position: center;">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <img src="/images/logo-light.svg" alt="" aria-hidden="true" class="hero-logo" style="height: 60px; margin-bottom: 2rem; opacity: 0.8;">
+      <img src="/images/logo-light.svg" alt="" aria-hidden="true" class="hero-logo">
       <h1><%= lang === 'ar' ? 'فن الفخامة' : 'The Art of Luxury' %></h1>
       <p><%= lang === 'ar' ? 'اكتشف مجموعة حصرية من أفضل المنتجات الفاخرة في العالم' : 'Discover an exclusive collection of the world\'s finest luxury products' %></p>
-      <div style="margin-top: 1rem;">
+      <div class="hero-buttons">
         <a href="/shop<%= lang === 'ar' ? '?lang=ar' : '?lang=en' %>" class="btn btn-secondary"><%= lang === 'ar' ? 'تسوق الآن' : 'Shop Now' %></a>
         <a href="#main-content" class="btn btn-outline" style="color: white; border-color: rgba(255,255,255,0.4);"><%= lang === 'ar' ? 'اكتشف المزيد' : 'Explore More' %></a>
       </div>
@@ -33,25 +28,20 @@
   </section>
 
   <style>
-    .hero {
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-
     .hero-overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(10,10,10,0.85) 0%, rgba(26,26,26,0.7) 50%, rgba(10,10,10,0.85) 100%);
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(135deg, rgba(10,10,10,0.75) 0%, rgba(26,26,26,0.55) 50%, rgba(10,10,10,0.75) 100%);
       z-index: 1;
     }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
+    .hero-content { position: relative; z-index: 2; }
+    .hero-logo { height: 100px; width: auto; margin-bottom: 2.5rem; opacity: 0.9; }
+    .hero-buttons { margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+    @media (max-width: 768px) {
+      .hero-logo { height: 70px; margin-bottom: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .hero-logo { height: 50px; margin-bottom: 1rem; }
     }
   </style>
 
