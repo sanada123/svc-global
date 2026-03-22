@@ -1959,11 +1959,17 @@ footer {
   z-index: 1;
   pointer-events: none;
 }
+
 /* ============================================
-   RTL Arabic Fix - letter-spacing & text-transform
-   Arabic text breaks with letter-spacing > 0
-   and text-transform: uppercase
+   RTL Arabic Fix - Comprehensive Override
+   Arabic text MUST have letter-spacing: 0
+   and no text-transform (breaks connected letters)
    ============================================ */
+
+[dir="rtl"] * {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
 
 [dir="rtl"] h1,
 [dir="rtl"] h2,
@@ -1971,16 +1977,18 @@ footer {
 [dir="rtl"] h4,
 [dir="rtl"] h5,
 [dir="rtl"] h6 {
+  font-family: 'Tajawal', sans-serif !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
+  word-spacing: 0.05em;
 }
 
 [dir="rtl"] .hero h1 {
-  letter-spacing: 0 !important;
-  text-transform: none !important;
   font-family: 'Tajawal', sans-serif !important;
   font-size: 5.5rem;
   font-weight: 900;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
   line-height: 1.3;
 }
 
@@ -1990,41 +1998,43 @@ footer {
   line-height: 1.9;
 }
 
-[dir="rtl"] .section-title,
-[dir="rtl"] .section-header h2 {
-  letter-spacing: 0 !important;
-  text-transform: none !important;
-}
-
 [dir="rtl"] .btn {
   letter-spacing: 0 !important;
   text-transform: none !important;
   font-size: 1rem;
+  font-family: 'Tajawal', sans-serif !important;
 }
 
-[dir="rtl"] .product-name,
-[dir="rtl"] .product-category,
-[dir="rtl"] .category-card h3 {
+[dir="rtl"] .section-header h2,
+[dir="rtl"] .section-title {
+  font-family: 'Tajawal', sans-serif !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
+}
+
+[dir="rtl"] .category-card h3,
+[dir="rtl"] .category-card-content h3 {
+  font-family: 'Tajawal', sans-serif !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+[dir="rtl"] .product-name {
+  font-family: 'Tajawal', sans-serif !important;
+  letter-spacing: 0 !important;
 }
 
 [dir="rtl"] .nav a,
 [dir="rtl"] .mobile-nav a {
+  font-family: 'Tajawal', sans-serif !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
 }
 
-[dir="rtl"] .footer-heading,
 [dir="rtl"] .footer h3,
-[dir="rtl"] .footer h4 {
-  letter-spacing: 0 !important;
-  text-transform: none !important;
-}
-
-[dir="rtl"] .badge,
-[dir="rtl"] .product-badge,
-[dir="rtl"] .tag {
+[dir="rtl"] .footer h4,
+[dir="rtl"] .footer-heading {
+  font-family: 'Tajawal', sans-serif !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
 }
@@ -2032,12 +2042,12 @@ footer {
 /* Hero responsive RTL */
 @media (max-width: 768px) {
   [dir="rtl"] .hero h1 {
-    font-size: 3rem;
+    font-size: 3rem !important;
   }
 }
 
 @media (max-width: 480px) {
   [dir="rtl"] .hero h1 {
-    font-size: 2.25rem;
+    font-size: 2.25rem !important;
   }
 }
