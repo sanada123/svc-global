@@ -1,43 +1,121 @@
 [
   {
     "id": "luxury-furniture",
-    "name": { "ar": "أثاث فاخر", "en": "Luxury Furniture" },
-    "description": { "ar": "مجموعة حصرية من الأثاث الفاخر للحمامات والمساحات الراقية", "en": "An exclusive collection of luxury furniture for bathrooms and upscale spaces" },
+    "name": {
+      "ar": "أثاث فاخر",
+      "en": "Luxury Furniture"
+    },
+    "description": {
+      "ar": "مجموعة حصرية من الأثاث الفاخر للحمامات والمساحات الراقية",
+      "en": "An exclusive collection of luxury furniture for bathrooms and upscale spaces"
+    },
     "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
     "subcategories": [
-      { "id": "bathtubs", "name": { "ar": "أحواض استحمام", "en": "Bathtubs" } },
-      { "id": "washbasins", "name": { "ar": "أحواض غسيل", "en": "Washbasins" } },
-      { "id": "cabinets", "name": { "ar": "خزائن", "en": "Cabinets" } },
-      { "id": "freestanding", "name": { "ar": "أحواض قائمة", "en": "Freestanding" } },
-      { "id": "mirrors", "name": { "ar": "مرايا", "en": "Mirrors" } },
-      { "id": "accessories", "name": { "ar": "إكسسوارات", "en": "Accessories" } }
+      {
+        "id": "bathtubs",
+        "name": {
+          "ar": "أحواض استحمام",
+          "en": "Bathtubs"
+        }
+      },
+      {
+        "id": "washbasins",
+        "name": {
+          "ar": "أحواض غسيل",
+          "en": "Washbasins"
+        }
+      },
+      {
+        "id": "cabinets",
+        "name": {
+          "ar": "خزائن",
+          "en": "Cabinets"
+        }
+      },
+      {
+        "id": "freestanding",
+        "name": {
+          "ar": "أحواض قائمة",
+          "en": "Freestanding"
+        }
+      },
+      {
+        "id": "mirrors",
+        "name": {
+          "ar": "مرايا",
+          "en": "Mirrors"
+        }
+      },
+      {
+        "id": "accessories",
+        "name": {
+          "ar": "إكسسوارات",
+          "en": "Accessories"
+        }
+      }
     ]
   },
   {
     "id": "writing-instruments",
-    "name": { "ar": "أدوات الكتابة", "en": "Writing Instruments" },
-    "description": { "ar": "أقلام فاخرة مصنوعة يدوياً من أنبل المواد والأحجار الكريمة", "en": "Luxury pens handcrafted from the finest materials and precious stones" },
+    "name": {
+      "ar": "أدوات الكتابة",
+      "en": "Writing Instruments"
+    },
+    "description": {
+      "ar": "أقلام فاخرة مصنوعة يدوياً من أنبل المواد والأحجار الكريمة",
+      "en": "Luxury pens handcrafted from the finest materials and precious stones"
+    },
     "image": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=800&q=80",
     "subcategories": [
-      { "id": "pens", "name": { "ar": "أقلام", "en": "Pens" } }
+      {
+        "id": "pens",
+        "name": {
+          "ar": "أقلام",
+          "en": "Pens"
+        }
+      }
     ]
   },
   {
     "id": "prayer-beads",
-    "name": { "ar": "مسابح", "en": "Prayer Beads" },
-    "description": { "ar": "مسابح فاخرة من أحجار طبيعية مع تفاصيل من الذهب والألماس", "en": "Luxury prayer beads from natural stones with gold and diamond details" },
-    "image": "https://images.unsplash.com/photo-1611323593898-3a27a97e5e5e?w=800&q=80",
+    "name": {
+      "ar": "مسابح",
+      "en": "Prayer Beads"
+    },
+    "description": {
+      "ar": "مسابح فاخرة من أحجار طبيعية مع تفاصيل من الذهب والألماس",
+      "en": "Luxury prayer beads from natural stones with gold and diamond details"
+    },
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80",
     "subcategories": [
-      { "id": "tasbih", "name": { "ar": "مسابح", "en": "Prayer Beads" } }
+      {
+        "id": "tasbih",
+        "name": {
+          "ar": "مسابح",
+          "en": "Prayer Beads"
+        }
+      }
     ]
   },
   {
     "id": "watches",
-    "name": { "ar": "ساعات", "en": "Watches" },
-    "description": { "ar": "ساعات فاخرة بآليات سويسرية وتصاميم حصرية", "en": "Luxury watches with Swiss mechanisms and exclusive designs" },
+    "name": {
+      "ar": "ساعات",
+      "en": "Watches"
+    },
+    "description": {
+      "ar": "ساعات فاخرة بآليات سويسرية وتصاميم حصرية",
+      "en": "Luxury watches with Swiss mechanisms and exclusive designs"
+    },
     "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&q=80",
     "subcategories": [
-      { "id": "watches", "name": { "ar": "ساعات", "en": "Watches" } }
+      {
+        "id": "watches",
+        "name": {
+          "ar": "ساعات",
+          "en": "Watches"
+        }
+      }
     ]
   }
 ]
