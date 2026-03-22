@@ -1959,3 +1959,85 @@ footer {
   z-index: 1;
   pointer-events: none;
 }
+/* ============================================
+   RTL Arabic Fix - letter-spacing & text-transform
+   Arabic text breaks with letter-spacing > 0
+   and text-transform: uppercase
+   ============================================ */
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+[dir="rtl"] .hero h1 {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  font-family: 'Tajawal', sans-serif !important;
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+[dir="rtl"] .hero p {
+  letter-spacing: 0 !important;
+  font-size: 1.25rem;
+  line-height: 1.9;
+}
+
+[dir="rtl"] .section-title,
+[dir="rtl"] .section-header h2 {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+[dir="rtl"] .btn {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  font-size: 1rem;
+}
+
+[dir="rtl"] .product-name,
+[dir="rtl"] .product-category,
+[dir="rtl"] .category-card h3 {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+[dir="rtl"] .nav a,
+[dir="rtl"] .mobile-nav a {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+[dir="rtl"] .footer-heading,
+[dir="rtl"] .footer h3,
+[dir="rtl"] .footer h4 {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+[dir="rtl"] .badge,
+[dir="rtl"] .product-badge,
+[dir="rtl"] .tag {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+/* Hero responsive RTL */
+@media (max-width: 768px) {
+  [dir="rtl"] .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  [dir="rtl"] .hero h1 {
+    font-size: 2.25rem;
+  }
+}
