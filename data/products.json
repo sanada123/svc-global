@@ -1,12 +1,15 @@
 [
   {
     "id": "baraka-single-suspension-cabinet",
-    "name": { "ar": "خزانة بركة المعلقة الفردية", "en": "BARAKA SINGLE SUSPENSION CABINET" },
+    "name": {
+      "ar": "خزانة بركة المعلقة الفردية",
+      "en": "BARAKA SINGLE SUSPENSION CABINET"
+    },
     "category": "luxury-furniture",
     "subcategory": "cabinets",
     "price": 24123,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/baraka-single-suspension-cabinet.jpg",
+    "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -18,12 +21,15 @@
   },
   {
     "id": "baraka-single-washbasin",
-    "name": { "ar": "حوض بركة الفردي", "en": "BARAKA SINGLE WASHBASIN" },
+    "name": {
+      "ar": "حوض بركة الفردي",
+      "en": "BARAKA SINGLE WASHBASIN"
+    },
     "category": "luxury-furniture",
     "subcategory": "washbasins",
     "price": 30276,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/baraka-single-washbasin.jpg",
+    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": true,
@@ -35,12 +41,15 @@
   },
   {
     "id": "baraka-suspension-cabinet",
-    "name": { "ar": "خزانة بركة المعلقة", "en": "BARAKA SUSPENSION CABINET" },
+    "name": {
+      "ar": "خزانة بركة المعلقة",
+      "en": "BARAKA SUSPENSION CABINET"
+    },
     "category": "luxury-furniture",
     "subcategory": "cabinets",
     "price": 38922,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/baraka-suspension-cabinet.jpg",
+    "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -52,12 +61,15 @@
   },
   {
     "id": "baraka-washbasin",
-    "name": { "ar": "حوض بركة", "en": "BARAKA WASHBASIN" },
+    "name": {
+      "ar": "حوض بركة",
+      "en": "BARAKA WASHBASIN"
+    },
     "category": "luxury-furniture",
     "subcategory": "washbasins",
     "price": 44664,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/baraka-washbasin.jpg",
+    "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -69,12 +81,15 @@
   },
   {
     "id": "chantaros-wall-mirror",
-    "name": { "ar": "مرآة شانتاروس الجدارية", "en": "CHANTAROS WALL MIRROR" },
+    "name": {
+      "ar": "مرآة شانتاروس الجدارية",
+      "en": "CHANTAROS WALL MIRROR"
+    },
     "category": "luxury-furniture",
     "subcategory": "mirrors",
     "price": 14120,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/chantaros-wall-mirror.jpg",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
     "inStock": true,
     "featured": true,
     "bestSeller": false,
@@ -86,12 +101,15 @@
   },
   {
     "id": "colosseum-freestanding",
-    "name": { "ar": "حوض كولوسيوم القائم", "en": "COLOSSEUM FREESTANDING" },
+    "name": {
+      "ar": "حوض كولوسيوم القائم",
+      "en": "COLOSSEUM FREESTANDING"
+    },
     "category": "luxury-furniture",
     "subcategory": "freestanding",
     "price": 13363,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/colosseum-freestanding.jpg",
+    "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80",
     "inStock": true,
     "featured": true,
     "bestSeller": false,
@@ -103,12 +121,15 @@
   },
   {
     "id": "diamond-faux-marble-bathtub",
-    "name": { "ar": "حوض استحمام دايموند بالرخام", "en": "DIAMOND FAUX MARBLE BATHTUB" },
+    "name": {
+      "ar": "حوض استحمام دايموند بالرخام",
+      "en": "DIAMOND FAUX MARBLE BATHTUB"
+    },
     "category": "luxury-furniture",
     "subcategory": "bathtubs",
     "price": 29834,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/diamond-faux-marble-bathtub.jpg",
+    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80",
     "inStock": true,
     "featured": true,
     "bestSeller": true,
@@ -120,12 +141,15 @@
   },
   {
     "id": "diamond-freestand",
-    "name": { "ar": "حوض دايموند القائم", "en": "DIAMOND FREESTAND" },
+    "name": {
+      "ar": "حوض دايموند القائم",
+      "en": "DIAMOND FREESTAND"
+    },
     "category": "luxury-furniture",
     "subcategory": "freestanding",
     "price": 15356,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/diamond-freestand.jpg",
+    "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": true,
@@ -137,12 +161,15 @@
   },
   {
     "id": "diamond-single-washbasin",
-    "name": { "ar": "حوض دايموند الفردي", "en": "DIAMOND SINGLE WASHBASIN" },
+    "name": {
+      "ar": "حوض دايموند الفردي",
+      "en": "DIAMOND SINGLE WASHBASIN"
+    },
     "category": "luxury-furniture",
     "subcategory": "washbasins",
     "price": 33968,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/diamond-single-washbasin.jpg",
+    "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -154,12 +181,15 @@
   },
   {
     "id": "eclipse-wall-mirror",
-    "name": { "ar": "مرآة إكليبس الجدارية", "en": "ECLIPSE WALL MIRROR" },
+    "name": {
+      "ar": "مرآة إكليبس الجدارية",
+      "en": "ECLIPSE WALL MIRROR"
+    },
     "category": "luxury-furniture",
     "subcategory": "mirrors",
     "price": 10058,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/eclipse-wall-mirror-2.jpg",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -171,12 +201,15 @@
   },
   {
     "id": "eden-towel-rack",
-    "name": { "ar": "حامل مناشف إيدن", "en": "EDEN TOWEL RACK" },
+    "name": {
+      "ar": "حامل مناشف إيدن",
+      "en": "EDEN TOWEL RACK"
+    },
     "category": "luxury-furniture",
     "subcategory": "accessories",
     "price": 4686,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/eden-towel-rack.jpg",
+    "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -188,12 +221,15 @@
   },
   {
     "id": "golden-eye-mirror",
-    "name": { "ar": "مرآة العين الذهبية", "en": "GOLDEN EYE MIRROR" },
+    "name": {
+      "ar": "مرآة العين الذهبية",
+      "en": "GOLDEN EYE MIRROR"
+    },
     "category": "luxury-furniture",
     "subcategory": "mirrors",
     "price": 2998,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/golden-eye-mirror.jpg",
+    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -205,12 +241,15 @@
   },
   {
     "id": "koi-freestand",
-    "name": { "ar": "حوض كوي القائم", "en": "KOI FREESTAND" },
+    "name": {
+      "ar": "حوض كوي القائم",
+      "en": "KOI FREESTAND"
+    },
     "category": "luxury-furniture",
     "subcategory": "freestanding",
     "price": 17654,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/koi-freestand.jpg",
+    "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -222,12 +261,15 @@
   },
   {
     "id": "lapiaz-bathtub",
-    "name": { "ar": "حوض استحمام لابياز", "en": "LAPIAZ BATHTUB" },
+    "name": {
+      "ar": "حوض استحمام لابياز",
+      "en": "LAPIAZ BATHTUB"
+    },
     "category": "luxury-furniture",
     "subcategory": "bathtubs",
     "price": 28193,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/lapiaz-bathtub.jpg",
+    "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -239,12 +281,15 @@
   },
   {
     "id": "lapiaz-freestand",
-    "name": { "ar": "حوض لابياز القائم", "en": "LAPIAZ FREESTAND" },
+    "name": {
+      "ar": "حوض لابياز القائم",
+      "en": "LAPIAZ FREESTAND"
+    },
     "category": "luxury-furniture",
     "subcategory": "freestanding",
     "price": 17055,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/lapiaz-freestand.jpg",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -256,12 +301,15 @@
   },
   {
     "id": "lapiaz-single-washbasin",
-    "name": { "ar": "حوض لابياز الفردي", "en": "LAPIAZ SINGLE WASHBASIN" },
+    "name": {
+      "ar": "حوض لابياز الفردي",
+      "en": "LAPIAZ SINGLE WASHBASIN"
+    },
     "category": "luxury-furniture",
     "subcategory": "washbasins",
     "price": 39647,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/lapiaz-single-washbasin.jpg",
+    "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -273,12 +321,15 @@
   },
   {
     "id": "lapiaz-suspension-cabinet",
-    "name": { "ar": "خزانة لابياز المعلقة", "en": "LAPIAZ SUSPENSION CABINET" },
+    "name": {
+      "ar": "خزانة لابياز المعلقة",
+      "en": "LAPIAZ SUSPENSION CABINET"
+    },
     "category": "luxury-furniture",
     "subcategory": "cabinets",
     "price": 20810,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/lapiaz-suspension-cabinet.jpg",
+    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -290,12 +341,15 @@
   },
   {
     "id": "lapiaz-washbasin",
-    "name": { "ar": "حوض لابياز المزدوج", "en": "LAPIAZ WASHBASIN" },
+    "name": {
+      "ar": "حوض لابياز المزدوج",
+      "en": "LAPIAZ WASHBASIN"
+    },
     "category": "luxury-furniture",
     "subcategory": "washbasins",
     "price": 50597,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/lapiaz-washbasin.jpg",
+    "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -307,12 +361,15 @@
   },
   {
     "id": "mondrian-mirror",
-    "name": { "ar": "مرآة موندريان", "en": "MONDRIAN MIRROR" },
+    "name": {
+      "ar": "مرآة موندريان",
+      "en": "MONDRIAN MIRROR"
+    },
     "category": "luxury-furniture",
     "subcategory": "mirrors",
     "price": 4141,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/mondrian-mirror.jpg",
+    "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -324,12 +381,15 @@
   },
   {
     "id": "nazca-single-suspension-cabinet",
-    "name": { "ar": "خزانة نازكا المعلقة الفردية", "en": "NAZCA SINGLE SUSPENSION CABINET" },
+    "name": {
+      "ar": "خزانة نازكا المعلقة الفردية",
+      "en": "NAZCA SINGLE SUSPENSION CABINET"
+    },
     "category": "luxury-furniture",
     "subcategory": "cabinets",
     "price": 24975,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/nazca-single-suspension-cabinet.jpg",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -341,12 +401,15 @@
   },
   {
     "id": "nazca-single-washbasin",
-    "name": { "ar": "حوض نازكا الفردي", "en": "NAZCA SINGLE WASHBASIN" },
+    "name": {
+      "ar": "حوض نازكا الفردي",
+      "en": "NAZCA SINGLE WASHBASIN"
+    },
     "category": "luxury-furniture",
     "subcategory": "washbasins",
     "price": 21725,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/nazca-single-washbasin.jpg",
+    "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -358,12 +421,15 @@
   },
   {
     "id": "nazca-suspension-cabinet",
-    "name": { "ar": "خزانة نازكا المعلقة", "en": "NAZCA SUSPENSION CABINET" },
+    "name": {
+      "ar": "خزانة نازكا المعلقة",
+      "en": "NAZCA SUSPENSION CABINET"
+    },
     "category": "luxury-furniture",
     "subcategory": "cabinets",
     "price": 20778,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/nazca-suspension-cabinet.jpg",
+    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -375,12 +441,15 @@
   },
   {
     "id": "nazca-washbasin",
-    "name": { "ar": "حوض نازكا المزدوج", "en": "NAZCA WASHBASIN" },
+    "name": {
+      "ar": "حوض نازكا المزدوج",
+      "en": "NAZCA WASHBASIN"
+    },
     "category": "luxury-furniture",
     "subcategory": "washbasins",
     "price": 26016,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/nazca-washbasin.jpg",
+    "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -392,12 +461,15 @@
   },
   {
     "id": "newton-bathtub",
-    "name": { "ar": "حوض استحمام نيوتن", "en": "NEWTON BATHTUB" },
+    "name": {
+      "ar": "حوض استحمام نيوتن",
+      "en": "NEWTON BATHTUB"
+    },
     "category": "luxury-furniture",
     "subcategory": "bathtubs",
     "price": 27310,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/newton-bathtub.jpg",
+    "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -409,12 +481,15 @@
   },
   {
     "id": "newton-freestand",
-    "name": { "ar": "حوض نيوتن القائم", "en": "NEWTON FREESTAND" },
+    "name": {
+      "ar": "حوض نيوتن القائم",
+      "en": "NEWTON FREESTAND"
+    },
     "category": "luxury-furniture",
     "subcategory": "freestanding",
     "price": 21252,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/newton-freestand.jpg",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -426,12 +501,15 @@
   },
   {
     "id": "newton-washbasin",
-    "name": { "ar": "حوض نيوتن", "en": "NEWTON WASHBASIN" },
+    "name": {
+      "ar": "حوض نيوتن",
+      "en": "NEWTON WASHBASIN"
+    },
     "category": "luxury-furniture",
     "subcategory": "washbasins",
     "price": 31223,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/newton-washbasin.jpg",
+    "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -443,12 +521,15 @@
   },
   {
     "id": "odonata-floor-mirror",
-    "name": { "ar": "مرآة أودوناتا الأرضية", "en": "ODONATA FLOOR MIRROR" },
+    "name": {
+      "ar": "مرآة أودوناتا الأرضية",
+      "en": "ODONATA FLOOR MIRROR"
+    },
     "category": "luxury-furniture",
     "subcategory": "mirrors",
     "price": 15185,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/odonata-floor-mirror.jpg",
+    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80",
     "inStock": true,
     "featured": true,
     "bestSeller": false,
@@ -460,12 +541,15 @@
   },
   {
     "id": "quimera-dressing-table",
-    "name": { "ar": "طاولة زينة كيميرا", "en": "QUIMERA DRESSING TABLE" },
+    "name": {
+      "ar": "طاولة زينة كيميرا",
+      "en": "QUIMERA DRESSING TABLE"
+    },
     "category": "luxury-furniture",
     "subcategory": "accessories",
     "price": 8125,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/quimera-dressing-table.jpg",
+    "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -477,12 +561,15 @@
   },
   {
     "id": "shinto-freestanding",
-    "name": { "ar": "حوض شينتو القائم", "en": "SHINTO FREESTANDING" },
+    "name": {
+      "ar": "حوض شينتو القائم",
+      "en": "SHINTO FREESTANDING"
+    },
     "category": "luxury-furniture",
     "subcategory": "freestanding",
     "price": 12006,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/shinto-freestanding.jpg",
+    "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -494,12 +581,15 @@
   },
   {
     "id": "shinto-washbasin",
-    "name": { "ar": "حوض شينتو", "en": "SHINTO WASHBASIN" },
+    "name": {
+      "ar": "حوض شينتو",
+      "en": "SHINTO WASHBASIN"
+    },
     "category": "luxury-furniture",
     "subcategory": "washbasins",
     "price": 18475,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/shinto-washbasin.jpg",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
     "inStock": true,
     "featured": true,
     "bestSeller": false,
@@ -511,12 +601,15 @@
   },
   {
     "id": "symphony-dressing-table",
-    "name": { "ar": "طاولة زينة سيمفوني", "en": "SYMPHONY DRESSING TABLE" },
+    "name": {
+      "ar": "طاولة زينة سيمفوني",
+      "en": "SYMPHONY DRESSING TABLE"
+    },
     "category": "luxury-furniture",
     "subcategory": "accessories",
     "price": 43592,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-dressing-table.jpg",
+    "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -528,12 +621,15 @@
   },
   {
     "id": "symphony-freestand",
-    "name": { "ar": "حوض سيمفوني القائم", "en": "SYMPHONY FREESTAND" },
+    "name": {
+      "ar": "حوض سيمفوني القائم",
+      "en": "SYMPHONY FREESTAND"
+    },
     "category": "luxury-furniture",
     "subcategory": "freestanding",
     "price": 19611,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-freestand.jpg",
+    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -545,12 +641,15 @@
   },
   {
     "id": "symphony-oval-bathtub",
-    "name": { "ar": "حوض استحمام سيمفوني البيضاوي", "en": "SYMPHONY OVAL BATHTUB" },
+    "name": {
+      "ar": "حوض استحمام سيمفوني البيضاوي",
+      "en": "SYMPHONY OVAL BATHTUB"
+    },
     "category": "luxury-furniture",
     "subcategory": "bathtubs",
     "price": 49871,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-oval-bathtub.jpg",
+    "image": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": true,
@@ -562,12 +661,15 @@
   },
   {
     "id": "symphony-single-ii-suspension-cabinet",
-    "name": { "ar": "خزانة سيمفوني المعلقة II", "en": "SYMPHONY SINGLE II SUSPENSION CABINET" },
+    "name": {
+      "ar": "خزانة سيمفوني المعلقة II",
+      "en": "SYMPHONY SINGLE II SUSPENSION CABINET"
+    },
     "category": "luxury-furniture",
     "subcategory": "cabinets",
     "price": 29992,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-single-ii-suspension-cabinet.jpg",
+    "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -579,12 +681,15 @@
   },
   {
     "id": "symphony-single-washbasin",
-    "name": { "ar": "حوض سيمفوني الفردي", "en": "SYMPHONY SINGLE WASHBASIN" },
+    "name": {
+      "ar": "حوض سيمفوني الفردي",
+      "en": "SYMPHONY SINGLE WASHBASIN"
+    },
     "category": "luxury-furniture",
     "subcategory": "washbasins",
     "price": 42550,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-single-washbasin.jpg",
+    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": true,
@@ -596,12 +701,15 @@
   },
   {
     "id": "symphony-washbasin",
-    "name": { "ar": "حوض سيمفوني المزدوج", "en": "SYMPHONY WASHBASIN" },
+    "name": {
+      "ar": "حوض سيمفوني المزدوج",
+      "en": "SYMPHONY WASHBASIN"
+    },
     "category": "luxury-furniture",
     "subcategory": "washbasins",
     "price": 56213,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/symphony-washbasin.jpg",
+    "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -613,12 +721,15 @@
   },
   {
     "id": "vertigo-mirror-set",
-    "name": { "ar": "مجموعة مرايا فيرتيغو", "en": "VERTIGO MIRROR SET" },
+    "name": {
+      "ar": "مجموعة مرايا فيرتيغو",
+      "en": "VERTIGO MIRROR SET"
+    },
     "category": "luxury-furniture",
     "subcategory": "mirrors",
     "price": 15304,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/vertigo-mirror-set.jpg",
+    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -630,12 +741,15 @@
   },
   {
     "id": "pen-black-lacquer",
-    "name": { "ar": "قلم حبر جاف جراند إليبس باللّكر الأسود", "en": "Grand Ellipse Black Lacquer Ballpoint Pen" },
+    "name": {
+      "ar": "قلم حبر جاف جراند إليبس باللّكر الأسود",
+      "en": "Grand Ellipse Black Lacquer Ballpoint Pen"
+    },
     "category": "writing-instruments",
     "subcategory": "pens",
     "price": 2050,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122339.png",
+    "image": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -647,12 +761,15 @@
   },
   {
     "id": "pen-brown-lacquer",
-    "name": { "ar": "قلم حبر جاف جراند إليبس باللّكر البني", "en": "Grand Ellipse Brown Lacquer Ballpoint Pen" },
+    "name": {
+      "ar": "قلم حبر جاف جراند إليبس باللّكر البني",
+      "en": "Grand Ellipse Brown Lacquer Ballpoint Pen"
+    },
     "category": "writing-instruments",
     "subcategory": "pens",
     "price": 2300,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122331-2.png",
+    "image": "https://images.unsplash.com/photo-1519974719765-e6559eac2575?w=600&q=80",
     "inStock": false,
     "featured": false,
     "bestSeller": false,
@@ -664,12 +781,15 @@
   },
   {
     "id": "pen-black-diamond",
-    "name": { "ar": "قلم حبر جاف جراند إليبس باللّكر الأسود والماس", "en": "Grand Ellipse Black Lacquer & Diamond Ballpoint Pen" },
+    "name": {
+      "ar": "قلم حبر جاف جراند إليبس باللّكر الأسود والماس",
+      "en": "Grand Ellipse Black Lacquer & Diamond Ballpoint Pen"
+    },
     "category": "writing-instruments",
     "subcategory": "pens",
     "price": 14800,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763126301.png",
+    "image": "https://images.unsplash.com/photo-1598618443855-232ee0f819f6?w=600&q=80",
     "inStock": false,
     "featured": false,
     "bestSeller": true,
@@ -681,12 +801,15 @@
   },
   {
     "id": "pen-brown-diamond",
-    "name": { "ar": "قلم حبر جاف جراند إليبس باللّكر البني والماس", "en": "Grand Ellipse Brown Lacquer & Diamond Ballpoint Pen" },
+    "name": {
+      "ar": "قلم حبر جاف جراند إليبس باللّكر البني والماس",
+      "en": "Grand Ellipse Brown Lacquer & Diamond Ballpoint Pen"
+    },
     "category": "writing-instruments",
     "subcategory": "pens",
     "price": 4800,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763127152.png",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -698,12 +821,15 @@
   },
   {
     "id": "pen-white-diamond",
-    "name": { "ar": "قلم حبر جاف جراند إليبس باللّكر الأبيض والماس", "en": "Grand Ellipse White Lacquer & Diamond Ballpoint Pen" },
+    "name": {
+      "ar": "قلم حبر جاف جراند إليبس باللّكر الأبيض والماس",
+      "en": "Grand Ellipse White Lacquer & Diamond Ballpoint Pen"
+    },
     "category": "writing-instruments",
     "subcategory": "pens",
     "price": 4800,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "image": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=600&q=80",
     "inStock": false,
     "featured": false,
     "bestSeller": false,
@@ -715,12 +841,15 @@
   },
   {
     "id": "pen-palladium-rosegold",
-    "name": { "ar": "قلم حبر جاف جراند إليبس بالبلاديوم والذهب الوردي", "en": "Grand Ellipse Palladium & Rose Gold Ballpoint Pen" },
+    "name": {
+      "ar": "قلم حبر جاف جراند إليبس بالبلاديوم والذهب الوردي",
+      "en": "Grand Ellipse Palladium & Rose Gold Ballpoint Pen"
+    },
     "category": "writing-instruments",
     "subcategory": "pens",
     "price": 2150,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "image": "https://images.unsplash.com/photo-1519974719765-e6559eac2575?w=600&q=80",
     "inStock": false,
     "featured": true,
     "bestSeller": false,
@@ -732,12 +861,15 @@
   },
   {
     "id": "rollerball-rosegold-diamond",
-    "name": { "ar": "قلم رولربول جراند إليبس بالذهب الوردي مع غطاء ألماس", "en": "Grand Ellipse Rose Gold Diamond Cap Rollerball Pen" },
+    "name": {
+      "ar": "قلم رولربول جراند إليبس بالذهب الوردي مع غطاء ألماس",
+      "en": "Grand Ellipse Rose Gold Diamond Cap Rollerball Pen"
+    },
     "category": "writing-instruments",
     "subcategory": "pens",
     "price": 124600,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "image": "https://images.unsplash.com/photo-1598618443855-232ee0f819f6?w=600&q=80",
     "inStock": false,
     "featured": false,
     "bestSeller": false,
@@ -749,12 +881,15 @@
   },
   {
     "id": "rollerball-palladium-diamond",
-    "name": { "ar": "قلم رولربول جراند إليبس بالبلاديوم مع غطاء ألماس", "en": "Grand Ellipse Palladium Diamond Cap Rollerball Pen" },
+    "name": {
+      "ar": "قلم رولربول جراند إليبس بالبلاديوم مع غطاء ألماس",
+      "en": "Grand Ellipse Palladium Diamond Cap Rollerball Pen"
+    },
     "category": "writing-instruments",
     "subcategory": "pens",
     "price": 124700,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80",
     "inStock": false,
     "featured": false,
     "bestSeller": false,
@@ -766,12 +901,15 @@
   },
   {
     "id": "rollerball-rosegold",
-    "name": { "ar": "قلم رولربول جراند إليبس بالذهب الوردي", "en": "Grand Ellipse Rose Gold Rollerball Pen" },
+    "name": {
+      "ar": "قلم رولربول جراند إليبس بالذهب الوردي",
+      "en": "Grand Ellipse Rose Gold Rollerball Pen"
+    },
     "category": "writing-instruments",
     "subcategory": "pens",
     "price": 14700,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "image": "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=600&q=80",
     "inStock": false,
     "featured": false,
     "bestSeller": false,
@@ -783,12 +921,15 @@
   },
   {
     "id": "tasbih-red-agate-diamond",
-    "name": { "ar": "مسبحة جراند إليبس بالعقيق الأحمر والماس", "en": "Grand Ellipse Red Agate & Diamond Prayer Beads" },
+    "name": {
+      "ar": "مسبحة جراند إليبس بالعقيق الأحمر والماس",
+      "en": "Grand Ellipse Red Agate & Diamond Prayer Beads"
+    },
     "category": "prayer-beads",
     "subcategory": "tasbih",
     "price": 39000,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122444.png",
+    "image": "https://images.unsplash.com/photo-1611323593898-3a27a97e5e5e?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -800,12 +941,15 @@
   },
   {
     "id": "tasbih-red-agate",
-    "name": { "ar": "مسبحة جراند إليبس بالعقيق الأحمر", "en": "Grand Ellipse Red Agate Prayer Beads" },
+    "name": {
+      "ar": "مسبحة جراند إليبس بالعقيق الأحمر",
+      "en": "Grand Ellipse Red Agate Prayer Beads"
+    },
     "category": "prayer-beads",
     "subcategory": "tasbih",
     "price": 36400,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122444.png",
+    "image": "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -817,12 +961,15 @@
   },
   {
     "id": "tasbih-black-onyx",
-    "name": { "ar": "مسبحة جراند إليبس بالأونيكس الأسود", "en": "Grand Ellipse Black Onyx Prayer Beads" },
+    "name": {
+      "ar": "مسبحة جراند إليبس بالأونيكس الأسود",
+      "en": "Grand Ellipse Black Onyx Prayer Beads"
+    },
     "category": "prayer-beads",
     "subcategory": "tasbih",
     "price": 27900,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122444.png",
+    "image": "https://images.unsplash.com/photo-1602526432604-029a709e131b?w=600&q=80",
     "inStock": true,
     "featured": false,
     "bestSeller": false,
@@ -834,12 +981,15 @@
   },
   {
     "id": "watch-grand-ellipse-royal",
-    "name": { "ar": "ساعة جراند إليبس رويال", "en": "Grand Ellipse Royal Watch" },
+    "name": {
+      "ar": "ساعة جراند إليبس رويال",
+      "en": "Grand Ellipse Royal Watch"
+    },
     "category": "watches",
     "subcategory": "watches",
     "price": 163700,
     "currency": "AED",
-    "image": "https://svcglobale.com/wp-content/uploads/2025/11/1763122322.png",
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&q=80",
     "inStock": false,
     "featured": false,
     "bestSeller": false,
